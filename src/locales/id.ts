@@ -121,14 +121,16 @@ export const id: Translation = {
   },
   contact: {
     eyebrow: 'Kontak',
-    title: 'Mari berkolaborasi.',
+    title: 'Punya proyek atau peluang untuk didiskusikan?',
     description:
-      'Saya terbuka untuk peluang pengembangan perangkat lunak, kolaborasi proyek, dan diskusi bermakna seputar teknologi.',
-    cta: 'Mari berkolaborasi',
+      'Saya terbuka untuk kesempatan magang, posisi junior software developer, proyek freelance, dan kolaborasi teknis.',
+    cta: 'Mulai percakapan',
     email: 'Email',
+    copyEmail: 'Salin email',
+    emailCopied: 'Email berhasil disalin',
+    copyFailed: 'Email tidak dapat disalin',
     github: 'GitHub',
     linkedin: 'LinkedIn',
-    comingSoon: 'Tautan profil dapat dikonfigurasi di src/data/profile.ts',
   },
   footer: {
     copyright: 'Fredi Irawan. Dibangun dengan React & TypeScript.',

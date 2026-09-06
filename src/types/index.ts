@@ -162,9 +162,11 @@ export interface Translation {
     description: string;
     cta: string;
     email: string;
+    copyEmail: string;
+    emailCopied: string;
+    copyFailed: string;
     github: string;
     linkedin: string;
-    comingSoon: string;
   };
   footer: { copyright: string; backToTop: string };
 }

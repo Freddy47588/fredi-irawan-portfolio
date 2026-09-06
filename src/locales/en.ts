@@ -121,14 +121,16 @@ export const en: Translation = {
   },
   contact: {
     eyebrow: 'Contact',
-    title: 'Let’s work together.',
+    title: 'Have a project or opportunity in mind?',
     description:
-      'I am open to software development opportunities, project collaborations, and thoughtful conversations about technology.',
-    cta: 'Let’s work together',
+      'I’m open to internships, junior software development roles, freelance projects, and technical collaborations.',
+    cta: 'Start a conversation',
     email: 'Email',
+    copyEmail: 'Copy email',
+    emailCopied: 'Email copied',
+    copyFailed: 'Could not copy email',
     github: 'GitHub',
     linkedin: 'LinkedIn',
-    comingSoon: 'Profile link can be configured in src/data/profile.ts',
   },
   footer: { copyright: 'Fredi Irawan. Built with React & TypeScript.', backToTop: 'Back to top' },
 };

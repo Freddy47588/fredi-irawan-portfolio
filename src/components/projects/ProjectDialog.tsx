@@ -3,7 +3,13 @@ import { ArrowUpRight, GitBranch, X } from 'lucide-react';
 import { useLanguage } from '../../hooks/useLanguage';
 import type { Project } from '../../types';
 
-export function ProjectDialog({ project, onClose }: { project: Project | null; onClose: () => void }) {
+export function ProjectDialog({
+  project,
+  onClose,
+}: {
+  project: Project | null;
+  onClose: () => void;
+}) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const { locale, t } = useLanguage();
 
@@ -52,13 +58,23 @@ export function ProjectDialog({ project, onClose }: { project: Project | null; o
         {(project.githubUrl || project.liveUrl) && (
           <div className="dialog-actions">
             {project.githubUrl && (
-              <a className="button button-primary" href={project.githubUrl} target="_blank" rel="noreferrer">
+              <a
+                className="button button-primary"
+                href={project.githubUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <GitBranch size={18} aria-hidden="true" />
                 {t.projects.github}
               </a>
             )}
             {project.liveUrl && (
-              <a className="button button-secondary" href={project.liveUrl} target="_blank" rel="noreferrer">
+              <a
+                className="button button-secondary"
+                href={project.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
                 {t.projects.live}
                 <ArrowUpRight size={18} aria-hidden="true" />
               </a>

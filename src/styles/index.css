@@ -1167,20 +1167,35 @@ a:focus-visible {
   margin-top: 1.5rem;
 }
 .contact-links a,
-.contact-links span {
+.contact-links button {
   min-height: 42px;
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  border: 0;
+  padding: 0;
+  background: transparent;
   color: var(--muted);
   font-size: 0.82rem;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
-.contact-links a:hover {
+.contact-links a:hover,
+.contact-links button:hover,
+.contact-links a:focus-visible,
+.contact-links button:focus-visible {
   color: var(--text);
+  transform: translateX(3px);
 }
-.contact-links small {
-  margin-left: auto;
-  font-size: 0.64rem;
+.copy-feedback {
+  min-height: 1.4rem;
+  margin-top: 0.55rem;
+  color: var(--accent-strong);
+  font-size: 0.76rem;
+  font-weight: 750;
 }
 .site-footer {
   border-top: 1px solid var(--line);

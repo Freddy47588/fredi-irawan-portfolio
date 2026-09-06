@@ -8,7 +8,9 @@ import { SectionHeading } from '../ui/SectionHeading';
 export function Certifications() {
   const { locale, t } = useLanguage();
   const [expanded, setExpanded] = useState(false);
-  const visible = expanded ? certificates : certificates.filter((certificate) => certificate.featured);
+  const visible = expanded
+    ? certificates
+    : certificates.filter((certificate) => certificate.featured);
 
   return (
     <section id="certifications" className="section">
@@ -56,7 +58,10 @@ export function Certifications() {
           ))}
         </div>
         {certificates.some((certificate) => !certificate.featured) && (
-          <button className="button button-secondary credentials-toggle" onClick={() => setExpanded((value) => !value)}>
+          <button
+            className="button button-secondary credentials-toggle"
+            onClick={() => setExpanded((value) => !value)}
+          >
             {expanded ? t.certificates.showLess : t.certificates.viewMore}
           </button>
         )}

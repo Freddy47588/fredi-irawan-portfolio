@@ -20,8 +20,14 @@ export const projects: Project[] = [
     },
     features: [
       { en: 'Image upload and confidence controls', id: 'Unggah citra dan pengaturan confidence' },
-      { en: 'Detection overlays and structured counts', id: 'Overlay deteksi dan hasil hitung terstruktur' },
-      { en: 'Explicit loading, validation, and error states', id: 'Status loading, validasi, dan galat yang jelas' },
+      {
+        en: 'Detection overlays and structured counts',
+        id: 'Overlay deteksi dan hasil hitung terstruktur',
+      },
+      {
+        en: 'Explicit loading, validation, and error states',
+        id: 'Status loading, validasi, dan galat yang jelas',
+      },
     ],
     year: 2026,
     categories: ['Computer Vision', 'Web'],
@@ -47,9 +53,18 @@ export const projects: Project[] = [
       id: 'Menyatukan catatan perawatan motor yang tersebar dan kebutuhan servis mendatang dalam satu alur yang mudah digunakan.',
     },
     features: [
-      { en: 'Vehicle, service, and schedule management', id: 'Pengelolaan kendaraan, servis, dan jadwal' },
-      { en: 'Maintenance statistics and report export', id: 'Statistik perawatan dan ekspor laporan' },
-      { en: 'Local reminders with Firestore-backed records', id: 'Pengingat lokal dengan data berbasis Firestore' },
+      {
+        en: 'Vehicle, service, and schedule management',
+        id: 'Pengelolaan kendaraan, servis, dan jadwal',
+      },
+      {
+        en: 'Maintenance statistics and report export',
+        id: 'Statistik perawatan dan ekspor laporan',
+      },
+      {
+        en: 'Local reminders with Firestore-backed records',
+        id: 'Pengingat lokal dengan data berbasis Firestore',
+      },
     ],
     year: 2026,
     categories: ['Mobile'],
@@ -75,8 +90,14 @@ export const projects: Project[] = [
       id: 'Mengubah data spasial lokal menjadi peta yang dapat dicari untuk memahami persebaran usaha di lingkungan sekitar.',
     },
     features: [
-      { en: 'Searchable business locations and layer controls', id: 'Lokasi usaha yang dapat dicari dan kontrol lapisan' },
-      { en: 'Measurement, geolocation, and shareable views', id: 'Pengukuran, geolokasi, dan tampilan yang dapat dibagikan' },
+      {
+        en: 'Searchable business locations and layer controls',
+        id: 'Lokasi usaha yang dapat dicari dan kontrol lapisan',
+      },
+      {
+        en: 'Measurement, geolocation, and shareable views',
+        id: 'Pengukuran, geolokasi, dan tampilan yang dapat dibagikan',
+      },
       { en: 'Responsive bilingual map interface', id: 'Antarmuka peta dwibahasa yang responsif' },
     ],
     year: 2026,
@@ -104,9 +125,15 @@ export const projects: Project[] = [
       id: 'Mengurangi hambatan dari membuka menu meja, memilih opsi, hingga menyelesaikan pesanan.',
     },
     features: [
-      { en: 'Search, filters, favorites, and availability states', id: 'Pencarian, filter, favorit, dan status ketersediaan' },
+      {
+        en: 'Search, filters, favorites, and availability states',
+        id: 'Pencarian, filter, favorit, dan status ketersediaan',
+      },
       { en: 'Option-aware cart and table context', id: 'Keranjang berbasis opsi dan konteks meja' },
-      { en: 'Accessible checkout and confirmation flow', id: 'Alur checkout dan konfirmasi yang aksesibel' },
+      {
+        en: 'Accessible checkout and confirmation flow',
+        id: 'Alur checkout dan konfirmasi yang aksesibel',
+      },
     ],
     year: 2026,
     categories: ['Web'],
@@ -133,9 +160,18 @@ export const projects: Project[] = [
       id: 'Mengeksplorasi penyampaian cerita 3D interaktif tanpa mengharuskan instalasi aplikasi native.',
     },
     features: [
-      { en: 'Marker tracking and animated GLTF model', id: 'Pelacakan marker dan model GLTF animasi' },
-      { en: 'Touch rotation, scaling, and audio controls', id: 'Kontrol rotasi sentuh, skala, dan audio' },
-      { en: 'Desktop preview and mobile QR launcher', id: 'Pratinjau desktop dan peluncur QR mobile' },
+      {
+        en: 'Marker tracking and animated GLTF model',
+        id: 'Pelacakan marker dan model GLTF animasi',
+      },
+      {
+        en: 'Touch rotation, scaling, and audio controls',
+        id: 'Kontrol rotasi sentuh, skala, dan audio',
+      },
+      {
+        en: 'Desktop preview and mobile QR launcher',
+        id: 'Pratinjau desktop dan peluncur QR mobile',
+      },
     ],
     year: 2026,
     categories: ['AR', 'Web'],
@@ -164,7 +200,10 @@ export const projects: Project[] = [
     features: [
       { en: 'CSV upload, validation, and cleaning', id: 'Unggah, validasi, dan pembersihan CSV' },
       { en: 'URL normalization and category mapping', id: 'Normalisasi URL dan pemetaan kategori' },
-      { en: 'Dashboard visualization and ARIMA preparation', id: 'Visualisasi dashboard dan persiapan ARIMA' },
+      {
+        en: 'Dashboard visualization and ARIMA preparation',
+        id: 'Visualisasi dashboard dan persiapan ARIMA',
+      },
     ],
     year: 2026,
     categories: ['Data', 'Web'],
@@ -189,7 +228,9 @@ export const projects: Project[] = [
       en: 'Explores repeatable checks for inconsistent attendance records before analysis.',
       id: 'Mengeksplorasi pemeriksaan berulang untuk data presensi yang tidak konsisten sebelum dianalisis.',
     },
-    features: [{ en: 'Validation and cleaning workflow', id: 'Alur validasi dan pembersihan data' }],
+    features: [
+      { en: 'Validation and cleaning workflow', id: 'Alur validasi dan pembersihan data' },
+    ],
     year: 2026,
     categories: ['Data', 'Web'],
     technologies: ['Python', 'Django', 'Data Cleaning'],

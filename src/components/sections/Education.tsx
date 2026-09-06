@@ -23,7 +23,11 @@ export function Education() {
               className={`education-entry ${item.featured ? 'education-featured' : ''}`}
             >
               <div className="education-icon">
-                {item.featured ? <GraduationCap aria-hidden="true" /> : <BookOpen aria-hidden="true" />}
+                {item.featured ? (
+                  <GraduationCap aria-hidden="true" />
+                ) : (
+                  <BookOpen aria-hidden="true" />
+                )}
               </div>
               <div>
                 <div className="education-topline">
