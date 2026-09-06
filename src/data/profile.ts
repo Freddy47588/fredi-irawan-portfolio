@@ -10,6 +10,6 @@ export const profile = {
   },
   github: 'https://github.com/Freddy47588',
   linkedin: '',
-  email: 'freddyirawan510@gmail.com',
+  email: 'osdfredi241@gmail.com',
   cvUrl: '',
 } as const;
