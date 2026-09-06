@@ -3,20 +3,16 @@ import { ArrowUpRight, GitBranch, X } from 'lucide-react';
 import { useLanguage } from '../../hooks/useLanguage';
 import type { Project } from '../../types';
 
-export function ProjectDialog({
-  project,
-  onClose,
-}: {
-  project: Project | null;
-  onClose: () => void;
-}) {
+export function ProjectDialog({ project, onClose }: { project: Project | null; onClose: () => void }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const { locale, t } = useLanguage();
+
   useEffect(() => {
     const dialog = dialogRef.current;
     if (project && dialog && !dialog.open) dialog.showModal();
     if (!project && dialog?.open) dialog.close();
   }, [project]);
+
   if (!project) return null;
   return (
     <dialog
@@ -29,9 +25,11 @@ export function ProjectDialog({
     >
       <div className="dialog-inner">
         <button className="dialog-close" onClick={onClose} aria-label={t.projects.close}>
-          <X size={20} />
+          <X size={20} aria-hidden="true" />
         </button>
-        <span className="eyebrow">{project.category}</span>
+        <span className="eyebrow">
+          {project.categories.map((category) => t.projects.filters[category]).join(' · ')}
+        </span>
         <h2>{project.title}</h2>
         <div className="dialog-copy">
           <h3>{t.projects.overview}</h3>
@@ -51,28 +49,22 @@ export function ProjectDialog({
             ))}
           </ul>
         </div>
-        <div className="dialog-actions">
-          <a
-            className="button button-primary"
-            href={project.githubUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <GitBranch size={18} />
-            {t.projects.github}
-          </a>
-          {project.liveUrl && (
-            <a
-              className="button button-secondary"
-              href={project.liveUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {t.projects.live}
-              <ArrowUpRight size={18} />
-            </a>
-          )}
-        </div>
+        {(project.githubUrl || project.liveUrl) && (
+          <div className="dialog-actions">
+            {project.githubUrl && (
+              <a className="button button-primary" href={project.githubUrl} target="_blank" rel="noreferrer">
+                <GitBranch size={18} aria-hidden="true" />
+                {t.projects.github}
+              </a>
+            )}
+            {project.liveUrl && (
+              <a className="button button-secondary" href={project.liveUrl} target="_blank" rel="noreferrer">
+                {t.projects.live}
+                <ArrowUpRight size={18} aria-hidden="true" />
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </dialog>
   );

@@ -1,8 +1,9 @@
 import { ArrowDown, ArrowUpRight, GitBranch, MapPin } from 'lucide-react';
+import { profile } from '../../data/profile';
 import { useLanguage } from '../../hooks/useLanguage';
 
 export function Hero() {
-  const { t } = useLanguage();
+  const { locale, t } = useLanguage();
   return (
     <section id="home" className="hero" aria-labelledby="hero-title">
       <div className="hero-grid" aria-hidden="true" />
@@ -22,7 +23,7 @@ export function Hero() {
           </a>
           <a
             className="button button-secondary"
-            href="https://github.com/Freddy47588"
+            href={profile.github}
             target="_blank"
             rel="noreferrer"
           >
@@ -32,10 +33,10 @@ export function Hero() {
           </a>
         </div>
         <div className="hero-meta">
-          <span>Fredi Irawan</span>
+          <span>{profile.name}</span>
           <span>
             <MapPin size={16} />
-            Malang, Indonesia
+            {profile.location[locale]}
           </span>
         </div>
       </div>

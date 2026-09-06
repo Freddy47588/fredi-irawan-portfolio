@@ -1,4 +1,5 @@
 import { ArrowUp, GitBranch } from 'lucide-react';
+import { profile } from '../../data/profile';
 import { useLanguage } from '../../hooks/useLanguage';
 
 export function Footer() {
@@ -10,16 +11,11 @@ export function Footer() {
           © {new Date().getFullYear()} {t.footer.copyright}
         </p>
         <div className="footer-links">
-          <a
-            href="https://github.com/Freddy47588"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="GitHub"
-          >
-            <GitBranch size={19} />
+          <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub">
+            <GitBranch size={19} aria-hidden="true" />
           </a>
           <a href="#home" aria-label={t.footer.backToTop}>
-            <ArrowUp size={19} />
+            <ArrowUp size={19} aria-hidden="true" />
           </a>
         </div>
       </div>

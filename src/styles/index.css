@@ -570,6 +570,19 @@ a:focus-visible {
   flex-direction: column;
   padding: 1.45rem;
 }
+.project-meta,
+.archive-meta,
+.certificate-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.65rem;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
 .project-content h3 {
   margin: 0;
   font-size: 1.25rem;
@@ -629,6 +642,72 @@ a:focus-visible {
   border: 1px dashed var(--line);
   padding: 2.5rem;
   text-align: center;
+  color: var(--muted);
+}
+
+.subsection-title {
+  margin: 0 0 1.2rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.project-archive {
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+}
+.archive-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 2rem;
+  margin-bottom: 1.25rem;
+}
+.archive-heading h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: -0.03em;
+}
+.archive-heading p {
+  max-width: 520px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.archive-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 265px;
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--surface) 76%, transparent);
+}
+.archive-card h4 {
+  margin: 0;
+  font-size: 1.08rem;
+}
+.archive-card > p {
+  margin: 0.55rem 0 1rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+.archive-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+.archive-actions .text-button {
+  margin-right: auto;
+}
+.archive-actions a {
   color: var(--muted);
 }
 
@@ -758,6 +837,261 @@ a:focus-visible {
   border: 1px solid var(--line);
   background: var(--surface);
   box-shadow: var(--shadow);
+}
+
+.experience-list {
+  display: grid;
+  gap: 1.25rem;
+}
+.experience-card {
+  display: grid;
+  grid-template-columns: minmax(230px, 0.7fr) minmax(0, 1.5fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.experience-lead > svg {
+  margin-bottom: 1.4rem;
+  color: var(--accent-strong);
+}
+.dark .experience-lead > svg {
+  color: var(--accent);
+}
+.experience-lead h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  letter-spacing: -0.025em;
+}
+.experience-meta {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+.experience-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.association {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+.experience-body > p {
+  margin: 0;
+  color: var(--muted);
+}
+.experience-body h4 {
+  margin: 1.4rem 0 0.55rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.highlight-list {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  font-size: 0.87rem;
+}
+.experience-body .tag-list {
+  margin-top: 1.35rem;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.education-entry {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.1rem;
+  padding: 1.4rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.education-featured {
+  min-height: 300px;
+  padding: clamp(1.5rem, 4vw, 2.2rem);
+  border-top: 2px solid var(--accent-strong);
+}
+.education-icon {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+.education-icon svg {
+  width: 21px;
+}
+.education-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.education-topline > span {
+  color: var(--muted);
+  font-size: 0.74rem;
+  white-space: nowrap;
+}
+.education-entry h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.education-program {
+  margin: 0.35rem 0 0;
+  color: var(--text);
+  font-weight: 700;
+}
+.education-description {
+  margin: 0.8rem 0 0;
+  color: var(--muted);
+  font-size: 0.87rem;
+}
+.ongoing-badge {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.7rem;
+  padding: 0.3rem 0.5rem;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.education-entry .tag-list {
+  margin-top: 1.2rem;
+}
+
+.training-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(270px, 0.55fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+.training-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.training-card,
+.milestone-card {
+  padding: 1.4rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.training-card-top {
+  display: flex;
+  justify-content: space-between;
+  color: var(--accent-strong);
+}
+.training-card-top span {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.training-card h3,
+.milestone-card h3 {
+  margin: 1rem 0 0.4rem;
+  font-size: 1rem;
+}
+.training-card p,
+.milestone-card > p:last-child {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+.training-card .training-period {
+  color: var(--text);
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+.milestone-card {
+  position: sticky;
+  top: 100px;
+  padding: 2rem;
+  border-top: 2px solid var(--accent-strong);
+  box-shadow: var(--shadow);
+}
+.milestone-card > svg {
+  margin-bottom: 1.5rem;
+  color: var(--accent-strong);
+}
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.certificate-card {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  min-height: 190px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  overflow: hidden;
+}
+.certificate-preview {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 0.7rem;
+  padding: 1rem;
+  border-right: 1px solid var(--line);
+  background: var(--surface-soft);
+  color: var(--accent-strong);
+  text-align: center;
+}
+.certificate-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.certificate-preview span {
+  color: var(--muted);
+  font-size: 0.65rem;
+}
+.certificate-copy {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+}
+.certificate-copy h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+.certificate-copy > p {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.certificate-copy small {
+  margin-top: 0.45rem;
+  color: var(--muted);
+}
+.certificate-copy a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: auto;
+  padding-top: 0.8rem;
+  color: var(--accent-strong);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+.credentials-toggle {
+  margin-top: 1.4rem;
+  cursor: pointer;
 }
 .education-card > svg {
   margin-bottom: 1.5rem;
@@ -902,6 +1236,18 @@ a:focus-visible {
   .contact-inner {
     grid-template-columns: 1fr;
   }
+  .archive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .training-layout {
+    grid-template-columns: 1fr;
+  }
+  .milestone-card {
+    position: static;
+  }
+  .certificate-card {
+    grid-template-columns: 115px minmax(0, 1fr);
+  }
   .education-card {
     position: static;
   }
@@ -947,8 +1293,31 @@ a:focus-visible {
     grid-template-columns: 1fr;
   }
   .skills-grid,
-  .projects-grid {
+  .projects-grid,
+  .archive-grid,
+  .education-grid,
+  .training-grid,
+  .certificate-grid {
     grid-template-columns: 1fr;
+  }
+  .archive-heading,
+  .education-topline {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+  .experience-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .education-entry {
+    grid-template-columns: 1fr;
+  }
+  .certificate-card {
+    grid-template-columns: 95px minmax(0, 1fr);
+  }
+  .certificate-preview span {
+    display: none;
   }
   .skill-card {
     min-height: auto;

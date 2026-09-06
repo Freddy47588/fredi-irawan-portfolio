@@ -1,22 +1,32 @@
 import type { SkillGroup } from '../types';
 
+// Skill proficiency is intentionally not scored; this list reflects used and studied tools.
 export const skillGroups: SkillGroup[] = [
   {
+    id: 'frontend',
     title: { en: 'Frontend', id: 'Frontend' },
-    skills: ['React', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'HTML', 'CSS', 'Vite'],
+    skills: ['React', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'HTML', 'CSS'],
   },
-  { title: { en: 'Mobile', id: 'Mobile' }, skills: ['Flutter', 'Dart', 'Material 3'] },
-  { title: { en: 'Backend', id: 'Backend' }, skills: ['Django', 'Python', 'FastAPI', 'REST API'] },
+  { id: 'mobile', title: { en: 'Mobile', id: 'Mobile' }, skills: ['Flutter', 'Dart'] },
   {
+    id: 'backend',
+    title: { en: 'Backend', id: 'Backend' },
+    skills: ['Python', 'Django', 'PHP', 'Laravel', 'REST API fundamentals'],
+  },
+  {
+    id: 'data-ai',
     title: { en: 'Data & AI', id: 'Data & AI' },
-    skills: ['Computer Vision', 'YOLO', 'D-FINE', 'ARIMA', 'Google Colab'],
+    skills: ['Data Analytics', 'Computer Vision', 'YOLO', 'D-FINE', 'ARIMA'],
+  },
+  { id: 'gis', title: { en: 'GIS', id: 'GIS' }, skills: ['QGIS', 'Web GIS'] },
+  {
+    id: 'database-cloud',
+    title: { en: 'Database / Cloud', id: 'Database / Cloud' },
+    skills: ['Firebase', 'Firestore', 'SQLite'],
   },
   {
-    title: { en: 'Database & Cloud', id: 'Database & Cloud' },
-    skills: ['Firebase', 'Firestore', 'Supabase', 'SQLite'],
-  },
-  {
-    title: { en: 'GIS & Tools', id: 'GIS & Alat' },
-    skills: ['QGIS', 'Web GIS', 'Leaflet', 'Git', 'GitHub', 'VS Code'],
+    id: 'tools',
+    title: { en: 'Tools', id: 'Perangkat' },
+    skills: ['Git', 'GitHub', 'Vite', 'Google Colab', 'VS Code'],
   },
 ];

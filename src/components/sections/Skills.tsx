@@ -1,10 +1,10 @@
-import { Braces, Cloud, Code2, Database, Map, Smartphone } from 'lucide-react';
+import { BrainCircuit, Braces, Code2, Database, Map, Smartphone, Wrench } from 'lucide-react';
 import { skillGroups } from '../../data/skills';
 import { useLanguage } from '../../hooks/useLanguage';
 import { Reveal } from '../ui/Reveal';
 import { SectionHeading } from '../ui/SectionHeading';
 
-const icons = [Code2, Smartphone, Braces, Database, Cloud, Map];
+const icons = [Code2, Smartphone, Braces, BrainCircuit, Map, Database, Wrench];
 export function Skills() {
   const { locale, t } = useLanguage();
   return (
@@ -21,7 +21,7 @@ export function Skills() {
           {skillGroups.map((group, index) => {
             const Icon = icons[index] ?? Code2;
             return (
-              <Reveal key={group.title.en} className="skill-card">
+              <Reveal key={group.id} className="skill-card">
                 <Icon size={22} aria-hidden="true" />
                 <h3>{group.title[locale]}</h3>
                 <ul>

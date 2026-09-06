@@ -1,10 +1,11 @@
 import { Crosshair, MapPin } from 'lucide-react';
+import { profile } from '../../data/profile';
 import { useLanguage } from '../../hooks/useLanguage';
 import { Reveal } from '../ui/Reveal';
 import { SectionHeading } from '../ui/SectionHeading';
 
 export function About() {
-  const { t } = useLanguage();
+  const { locale, t } = useLanguage();
   return (
     <section id="about" className="section">
       <Reveal className="container about-grid">
@@ -17,7 +18,7 @@ export function About() {
             height="760"
           />
           <div className="portrait-label">
-            <span>01</span> DESIGN · BUILD · LEARN
+            <span>01</span> {t.about.portraitLabel}
           </div>
         </div>
         <div className="about-copy">
@@ -26,14 +27,14 @@ export function About() {
           <dl className="fact-list">
             <div>
               <dt>
-                <MapPin size={18} />
+                <MapPin size={18} aria-hidden="true" />
                 {t.about.location}
               </dt>
-              <dd>Malang, Indonesia</dd>
+              <dd>{profile.location[locale]}</dd>
             </div>
             <div>
               <dt>
-                <Crosshair size={18} />
+                <Crosshair size={18} aria-hidden="true" />
                 {t.about.focus}
               </dt>
               <dd>{t.about.focusValue}</dd>

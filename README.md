@@ -1,98 +1,111 @@
 # Fredi Irawan — Developer Portfolio
 
-A modern, bilingual developer portfolio for Fredi Irawan. It presents selected work across web, mobile, GIS, computer vision, data, and interactive technology in a fast static site.
+A production-ready bilingual portfolio for Fredi Irawan, an Informatics student and software developer in Malang, East Java, Indonesia. The site presents verified education, training, internships, credentials, and selected projects across web, mobile, GIS, data analytics, computer vision, and augmented reality.
 
 ## ✨ Features
 
-- React, TypeScript, Vite, and Tailwind CSS
-- Responsive navigation and layouts from 320px to large desktops
-- Dark and light themes with persistent preference
-- English (default) and Bahasa Indonesia localization
-- Filterable project collection with accessible detail dialogs
-- Semantic HTML, keyboard navigation, focus states, and reduced-motion support
-- SEO metadata, Open Graph tags, sitemap, robots file, and favicon
-- Automated GitHub Pages deployment
+- Responsive, recruiter-friendly single-page portfolio
+- English default with instant Bahasa Indonesia localization
+- Persistent dark/light theme and language preferences
+- Data-driven projects, skills, experience, education, training, and certificates
+- Category-based project filters and compact project archive
+- Accessible project detail dialogs, semantic structure, focus states, and reduced-motion support
+- Static SEO metadata, Open Graph, sitemap, robots file, and favicon
+- Automated GitHub Pages validation and deployment
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
-- **UI:** React 19, TypeScript, Tailwind CSS 4, Lucide React
-- **Build:** Vite 7
-- **Quality:** ESLint, Prettier, strict TypeScript
-- **Hosting:** GitHub Pages through GitHub Actions
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS 4
+- Lucide React
+- ESLint and Prettier
 
-## 📁 Project Structure
+## 📁 Architecture
 
 ```text
 src/
 ├── components/
-│   ├── layout/        # Navbar and footer
-│   ├── projects/      # Project cards and accessible dialog
-│   ├── sections/      # Portfolio page sections
-│   └── ui/            # Shared headings and reveal behavior
-├── data/              # Projects, skills, experience, and education
+│   ├── layout/        # Navigation and footer
+│   ├── projects/      # Project card and accessible detail dialog
+│   ├── sections/      # Page sections
+│   └── ui/            # Shared presentation primitives
+├── data/              # All maintainable portfolio content
 ├── hooks/             # Language and theme state
-├── locales/           # English and Indonesian translations
+├── locales/           # English and Indonesian UI copy
 ├── styles/            # Tailwind import and design system
-├── types/             # Shared TypeScript types
+├── types/             # Shared TypeScript contracts
 ├── App.tsx
 └── main.tsx
 public/
+├── certificates/      # Optional credential previews
 ├── images/            # Profile image
-└── projects/          # Lightweight project preview assets
+└── projects/          # Optimized project previews
 ```
 
-## 🚀 Getting Started
+Personal links and public profile details are centralized in `src/data/profile.ts`. UI components consume typed data and do not contain project, education, internship, skill, or credential records.
 
-Node.js 20 or newer is recommended.
+## 🌍 Localization
+
+English is the default language. Bahasa Indonesia is available through the visible `EN / ID` switcher, updates immediately without a reload, and persists in `localStorage`.
+
+- UI translations: `src/locales/en.ts` and `src/locales/id.ts`
+- Bilingual content: localized fields inside each `src/data/*.ts` record
+- Language state: `src/hooks/useLanguage.tsx`
+
+## 🧑‍💻 Adding Projects
+
+1. Add an optimized screenshot to `public/projects/` (optional).
+2. Add one typed project object to `src/data/projects.ts`.
+3. Set `featured: true` for the main grid or `false` for the compact archive.
+4. Add only verified `githubUrl` and `liveUrl` values.
+
+The project filters, cards, archive, and detail dialog update automatically from metadata.
+
+## 🎓 Adding Education
+
+Add one object to `src/data/education.ts`. Dates are optional and should be omitted when they have not been verified. Use `featured: true` for technically relevant or current education.
+
+## 🏆 Adding Certificates
+
+1. Optionally add an optimized preview image to `public/certificates/`.
+2. Add one object to `src/data/certificates.ts`.
+3. Set the optional `image` to the filename only, for example `image: 'ai-900.webp'`.
+4. Add a `credentialUrl` only when a public, verified link exists.
+
+Certificates without images receive a lightweight placeholder, so PDF files are never required in the initial page load.
+
+## 🚀 Local Development
+
+Node.js 22 or newer is recommended.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Vite prints the local development URL in the terminal.
-
-## 🏗️ Production Build
+## 🏗 Production Build
 
 ```bash
 npm run lint
 npm run typecheck
 npm run build
-npm run preview
 ```
 
 The optimized static output is written to `dist/`.
 
 ## 🌐 Deployment
 
-The workflow at `.github/workflows/deploy.yml` validates and deploys `dist/` whenever `main` is pushed. In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**.
+`.github/workflows/deploy.yml` runs install, lint, typecheck, and build checks before deploying `dist/` to GitHub Pages. The Vite base path is derived from `GITHUB_REPOSITORY` in GitHub Actions, so repository project pages work without hardcoding the folder name.
 
-The Vite base path is derived from `GITHUB_REPOSITORY` during Actions builds, so project pages work after a repository rename—including `fredi-irawan-dev-portfolio`. Local builds use `/`. For a username site such as `Freddy47588.github.io`, the same dynamic configuration resolves to `/<repository>/`; change `base` in `vite.config.ts` to `/` for that special case.
+In GitHub repository settings, select **Pages → Build and deployment → Source → GitHub Actions**.
 
-Canonical, Open Graph, robots, and sitemap URLs currently point to the existing `fredi-irawan-portfolio` GitHub Pages address. Update these files if the repository or production domain changes:
+If the repository or production domain changes, also update canonical and social metadata in:
 
 - `index.html`
 - `public/robots.txt`
 - `public/sitemap.xml`
-
-## 🌍 Languages
-
-- **English** — default
-- **Bahasa Indonesia** — selectable from the navigation bar
-
-The selected language is applied instantly and persisted in `localStorage`. Translation copy lives in `src/locales/`.
-
-## 📸 Screenshots
-
-Add final desktop and mobile captures here after the production deployment. The project cards currently use custom lightweight placeholders rather than unrelated stock photography.
-
-## Manual Content Updates
-
-- Replace placeholder project previews in `public/projects/` with optimized real screenshots.
-- Add a CV PDF and enable a download action when the final document is available.
-- Add Fredi’s verified LinkedIn URL in the contact section.
-- Add verified internship/employer names and dates to `src/data/experience.ts`.
-- Add live demo URLs to `src/data/projects.ts` only when they are publicly available.
 
 ## 📄 License
 

@@ -29,12 +29,14 @@ export function Navbar() {
     ['skills', t.nav.skills],
     ['projects', t.nav.projects],
     ['experience', t.nav.experience],
+    ['education', t.nav.education],
+    ['certifications', t.nav.certifications],
     ['contact', t.nav.contact],
   ];
   const closeMenu = () => setOpen(false);
   return (
     <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
-      <nav className="container nav-inner" aria-label="Primary navigation">
+      <nav className="container nav-inner" aria-label={t.nav.primary}>
         <a className="wordmark" href="#home" onClick={closeMenu} aria-label="Fredi Irawan, home">
           <span>FI</span>
           <strong>Fredi Irawan</strong>
@@ -47,7 +49,7 @@ export function Navbar() {
           ))}
         </div>
         <div className="nav-actions">
-          <div className="language-switch" role="group" aria-label="Language">
+          <div className="language-switch" role="group" aria-label={t.nav.language}>
             <button
               className={locale === 'en' ? 'active' : ''}
               onClick={() => setLocale('en')}

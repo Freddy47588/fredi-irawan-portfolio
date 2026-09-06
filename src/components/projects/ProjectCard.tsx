@@ -12,19 +12,25 @@ export function ProjectCard({
   const { locale, t } = useLanguage();
   return (
     <article className="project-card">
-      <div className="project-image-wrap">
-        <img
-          src={`${import.meta.env.BASE_URL}projects/${project.image}`}
-          alt={`${t.projects.imageAlt} ${project.title}`}
-          loading="lazy"
-          width="720"
-          height="420"
-        />
-        <span className="category-chip">
-          {project.category === 'AI' ? 'AI / Computer Vision' : project.category}
-        </span>
-      </div>
+      {project.image && (
+        <div className="project-image-wrap">
+          <img
+            src={`${import.meta.env.BASE_URL}projects/${project.image}`}
+            alt={`${t.projects.imageAlt} ${project.title}`}
+            loading="lazy"
+            width="720"
+            height="420"
+          />
+          <span className="category-chip">
+            {project.categories.map((category) => t.projects.filters[category]).join(' · ')}
+          </span>
+        </div>
+      )}
       <div className="project-content">
+        <div className="project-meta">
+          <span>{project.year}</span>
+          <span>{t.projects.status[project.status]}</span>
+        </div>
         <h3>{project.title}</h3>
         <p>{project.description[locale]}</p>
         <ul className="tag-list" aria-label={t.projects.technology}>
@@ -35,16 +41,18 @@ export function ProjectCard({
         <div className="project-actions">
           <button className="text-button" onClick={() => onDetails(project)}>
             {t.projects.details}
-            <ArrowUpRight size={16} />
+            <ArrowUpRight size={16} aria-hidden="true" />
           </button>
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={`${t.projects.github}: ${project.title}`}
-          >
-            <GitBranch size={18} />
-          </a>
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`${t.projects.github}: ${project.title}`}
+            >
+              <GitBranch size={18} aria-hidden="true" />
+            </a>
+          )}
           {project.liveUrl && (
             <a
               href={project.liveUrl}
@@ -52,7 +60,7 @@ export function ProjectCard({
               rel="noreferrer"
               aria-label={`${t.projects.live}: ${project.title}`}
             >
-              <ArrowUpRight size={18} />
+              <ArrowUpRight size={18} aria-hidden="true" />
             </a>
           )}
         </div>
