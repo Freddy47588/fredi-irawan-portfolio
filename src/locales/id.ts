@@ -24,6 +24,7 @@ export const id: Translation = {
       'Mahasiswa Teknik Informatika dan software developer yang mengembangkan solusi praktis di bidang web, mobile, GIS, analitik data, dan computer vision.',
     projects: 'Jelajahi proyek',
     github: 'Profil GitHub',
+    cv: 'Lihat CV',
     availability: 'Terbuka untuk peluang dan kolaborasi',
     workspace: 'Ruang kerja developer',
     workspaceFocus: ['Web & Mobile', 'GIS & Data', 'Computer Vision'],

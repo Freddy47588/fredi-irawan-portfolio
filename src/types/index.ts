@@ -100,6 +100,7 @@ export interface Translation {
     description: string;
     projects: string;
     github: string;
+    cv: string;
     availability: string;
     workspace: string;
     workspaceFocus: [string, string, string];

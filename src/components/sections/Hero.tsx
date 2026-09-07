@@ -1,6 +1,7 @@
 import {
   ArrowDown,
   ArrowUpRight,
+  FileText,
   GitBranch,
   Map,
   MapPin,
@@ -13,6 +14,10 @@ import { useLanguage } from '../../hooks/useLanguage';
 
 export function Hero() {
   const { locale, t } = useLanguage();
+  const cvHref = profile.cvUrl
+    ? `${import.meta.env.BASE_URL}${profile.cvUrl.replace(/^\/+/, '')}`
+    : '';
+
   return (
     <section id="home" className="hero" aria-labelledby="hero-title">
       <div className="hero-grid" aria-hidden="true" />
@@ -47,6 +52,18 @@ export function Hero() {
               {t.hero.github}
               <ArrowUpRight size={16} />
             </a>
+            {cvHref && (
+              <a
+                className="button button-secondary"
+                href={cvHref}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FileText size={18} aria-hidden="true" />
+                {t.hero.cv}
+                <ArrowUpRight size={16} aria-hidden="true" />
+              </a>
+            )}
           </div>
           <div className="hero-meta hero-enter" style={{ '--hero-order': 5 } as CSSProperties}>
             <span>{profile.name}</span>

@@ -9,7 +9,7 @@ export const profile = {
     id: 'Malang, Jawa Timur, Indonesia',
   },
   github: 'https://github.com/Freddy47588',
-  linkedin: '',
+  linkedin: 'https://www.linkedin.com/in/fredi-irawan/',
   email: 'osdfredi241@gmail.com',
-  cvUrl: '',
+  cvUrl: '/cv/Fredi-Irawan-CV.pdf',
 } as const;

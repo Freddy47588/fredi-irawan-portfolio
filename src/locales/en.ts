@@ -24,6 +24,7 @@ export const en: Translation = {
       'Informatics student and software developer creating reliable applications across web, mobile, GIS, data analytics, and computer vision.',
     projects: 'Explore projects',
     github: 'GitHub profile',
+    cv: 'View CV',
     availability: 'Open to opportunities and collaboration',
     workspace: 'Developer workspace',
     workspaceFocus: ['Web & Mobile', 'GIS & Data', 'Computer Vision'],
