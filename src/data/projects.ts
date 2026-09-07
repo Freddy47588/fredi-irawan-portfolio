@@ -261,8 +261,8 @@ export const projects: Project[] = [
     status: 'academic',
   },
   {
-    id: 'goevent',
-    title: 'GoEvent',
+    id: 'evendly',
+    title: 'Evendly',
     description: {
       en: 'A selected Flutter coursework application exploring event discovery and mobile interface patterns.',
       id: 'Aplikasi tugas Flutter pilihan yang mengeksplorasi penemuan acara dan pola antarmuka mobile.',
