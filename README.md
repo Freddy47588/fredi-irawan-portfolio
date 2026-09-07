@@ -12,6 +12,7 @@ A production-ready bilingual portfolio for Fredi Irawan, an Informatics student 
 - Scroll-aware active navigation with an accessible location indicator
 - Directional, one-time reveal animations with short card staggers
 - Accessible project detail dialogs with backdrop/Escape closing and trigger focus restoration
+- Direct bilingual CV download from the hero
 - Reduced-motion support across reveal, hero, filter, dialog, and theme transitions
 - Static SEO metadata, a 1200 × 630 social preview, sitemap, robots file, and favicon
 - Automated GitHub Pages validation and deployment
@@ -42,14 +43,26 @@ src/
 ├── App.tsx
 └── main.tsx
 public/
-├── certificates/      # Optional credential previews
-├── images/            # Profile image
-├── projects/          # Optimized project previews
-├── social-preview.svg # Editable social preview source
-└── social-preview.png # Production social card (1200 × 630)
+├── certificates/       # Optional credential previews
+├── cv/                 # Public CV PDF
+├── images/             # Profile image
+├── projects/           # Optimized project previews
+├── social-preview.svg  # Editable social preview source
+└── social-preview.png  # Production social card (1200 × 630)
 ```
 
-Personal links and public profile details are centralized in `src/data/profile.ts`. The `linkedin` and `cvUrl` values control their related actions; leave either value empty to hide that action gracefully. CV files belong in `public/cv/`, and the hero resolves `cvUrl` through Vite's deployment base path. The CV action opens a native, accessible preview dialog with open-in-new-tab and download fallbacks. UI components consume typed data and do not contain project, education, internship, skill, or credential records.
+Personal links and public profile details are centralized in `src/data/profile.ts`. UI components consume typed data and do not contain project, education, internship, skill, or credential records.
+
+## CV Download
+
+The hero's bilingual **Download CV / Unduh CV** action downloads the configured PDF directly.
+
+- Store the PDF in `public/cv/`.
+- Configure its public path only through `cvUrl` in `src/data/profile.ts`; UI components do not hardcode the path.
+- The hero resolves `cvUrl` through Vite's `BASE_URL`, so the download works on local static hosting and GitHub Pages repository paths.
+- Leave `cvUrl` empty to hide the hero action gracefully.
+
+The `linkedin` value in `src/data/profile.ts` follows the same conditional pattern: leave it empty to hide unavailable LinkedIn actions.
 
 ## Motion and Navigation
 

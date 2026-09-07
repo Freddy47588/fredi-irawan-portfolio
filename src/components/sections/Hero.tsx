@@ -8,15 +8,12 @@ import {
   MonitorSmartphone,
   ScanSearch,
 } from 'lucide-react';
-import { useRef, useState, type CSSProperties } from 'react';
+import type { CSSProperties } from 'react';
 import { profile } from '../../data/profile';
 import { useLanguage } from '../../hooks/useLanguage';
-import { CvPreviewModal } from '../ui/CvPreviewModal';
 
 export function Hero() {
   const { locale, t } = useLanguage();
-  const [isCvOpen, setIsCvOpen] = useState(false);
-  const cvTriggerRef = useRef<HTMLButtonElement>(null);
   const cvHref = profile.cvUrl
     ? `${import.meta.env.BASE_URL}${profile.cvUrl.replace(/^\/+/, '')}`
     : '';
@@ -56,16 +53,11 @@ export function Hero() {
               <ArrowUpRight size={16} />
             </a>
             {cvHref && (
-              <button
-                ref={cvTriggerRef}
-                type="button"
-                className="button button-secondary"
-                onClick={() => setIsCvOpen(true)}
-              >
+              <a className="button button-secondary" href={cvHref} download="Fredi-Irawan-CV.pdf">
                 <FileText size={18} aria-hidden="true" />
                 {t.hero.cv}
-                <ArrowUpRight size={16} aria-hidden="true" />
-              </button>
+                <ArrowDown size={16} aria-hidden="true" />
+              </a>
             )}
           </div>
           <div className="hero-meta hero-enter" style={{ '--hero-order': 5 } as CSSProperties}>
@@ -102,12 +94,6 @@ export function Hero() {
           <div className="workspace-card-accent" aria-hidden="true" />
         </aside>
       </div>
-      <CvPreviewModal
-        isOpen={isCvOpen}
-        pdfUrl={cvHref}
-        triggerRef={cvTriggerRef}
-        onClose={() => setIsCvOpen(false)}
-      />
     </section>
   );
 }
