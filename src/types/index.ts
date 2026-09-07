@@ -105,6 +105,14 @@ export interface Translation {
     workspace: string;
     workspaceFocus: [string, string, string];
   };
+  cvModal: {
+    title: string;
+    close: string;
+    previewLabel: string;
+    fallback: string;
+    open: string;
+    download: string;
+  };
   about: {
     eyebrow: string;
     title: string;

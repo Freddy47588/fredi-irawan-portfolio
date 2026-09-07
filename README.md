@@ -49,7 +49,7 @@ public/
 └── social-preview.png # Production social card (1200 × 630)
 ```
 
-Personal links and public profile details are centralized in `src/data/profile.ts`. The `linkedin` and `cvUrl` values control their related actions; leave either value empty to hide that action gracefully. CV files belong in `public/cv/`, and the hero resolves `cvUrl` through Vite's deployment base path. UI components consume typed data and do not contain project, education, internship, skill, or credential records.
+Personal links and public profile details are centralized in `src/data/profile.ts`. The `linkedin` and `cvUrl` values control their related actions; leave either value empty to hide that action gracefully. CV files belong in `public/cv/`, and the hero resolves `cvUrl` through Vite's deployment base path. The CV action opens a native, accessible preview dialog with open-in-new-tab and download fallbacks. UI components consume typed data and do not contain project, education, internship, skill, or credential records.
 
 ## Motion and Navigation
 

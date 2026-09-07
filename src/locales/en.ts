@@ -29,6 +29,14 @@ export const en: Translation = {
     workspace: 'Developer workspace',
     workspaceFocus: ['Web & Mobile', 'GIS & Data', 'Computer Vision'],
   },
+  cvModal: {
+    title: 'Curriculum Vitae',
+    close: 'Close CV preview',
+    previewLabel: 'Fredi Irawan curriculum vitae PDF preview',
+    fallback: 'If the PDF preview is unavailable, use one of the options below.',
+    open: 'Open in New Tab',
+    download: 'Download CV',
+  },
   about: {
     eyebrow: 'About',
     title: 'A hands-on path through technology.',

@@ -29,6 +29,14 @@ export const id: Translation = {
     workspace: 'Ruang kerja developer',
     workspaceFocus: ['Web & Mobile', 'GIS & Data', 'Computer Vision'],
   },
+  cvModal: {
+    title: 'Curriculum Vitae',
+    close: 'Tutup pratinjau CV',
+    previewLabel: 'Pratinjau PDF curriculum vitae Fredi Irawan',
+    fallback: 'Jika pratinjau PDF tidak tersedia, gunakan salah satu opsi berikut.',
+    open: 'Buka di Tab Baru',
+    download: 'Unduh CV',
+  },
   about: {
     eyebrow: 'Tentang',
     title: 'Perjalanan teknologi yang tumbuh lewat praktik.',
