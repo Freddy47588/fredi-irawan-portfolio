@@ -6,10 +6,13 @@ import { SectionHeading } from '../ui/SectionHeading';
 
 export function Education() {
   const { locale, t } = useLanguage();
+  const featuredEducation = education.filter((item) => item.featured);
+  const earlierEducation = education.filter((item) => !item.featured);
+
   return (
     <section id="education" className="section">
       <div className="container">
-        <Reveal>
+        <Reveal direction="left">
           <SectionHeading
             eyebrow={t.education.eyebrow}
             title={t.education.title}
@@ -17,17 +20,10 @@ export function Education() {
           />
         </Reveal>
         <div className="education-grid">
-          {education.map((item) => (
-            <Reveal
-              key={item.id}
-              className={`education-entry ${item.featured ? 'education-featured' : ''}`}
-            >
+          {featuredEducation.map((item, index) => (
+            <Reveal key={item.id} className="education-entry education-featured" delay={index * 80}>
               <div className="education-icon">
-                {item.featured ? (
-                  <GraduationCap aria-hidden="true" />
-                ) : (
-                  <BookOpen aria-hidden="true" />
-                )}
+                <GraduationCap aria-hidden="true" />
               </div>
               <div>
                 <div className="education-topline">
@@ -53,6 +49,27 @@ export function Education() {
               </div>
             </Reveal>
           ))}
+        </div>
+        <div className="earlier-education" aria-labelledby="earlier-education-title">
+          <Reveal direction="left">
+            <h3 id="earlier-education-title" className="subsection-title">
+              {t.education.earlier}
+            </h3>
+          </Reveal>
+          <div className="earlier-education-list">
+            {earlierEducation.map((item, index) => (
+              <Reveal key={item.id} className="earlier-education-item" delay={index * 70}>
+                <div className="education-icon">
+                  <BookOpen aria-hidden="true" />
+                </div>
+                <div>
+                  <p className="timeline-type">{item.level[locale]}</p>
+                  <h4>{item.institution}</h4>
+                  <p>{item.description[locale]}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -7,7 +7,7 @@ export function ProjectCard({
   onDetails,
 }: {
   project: Project;
-  onDetails: (project: Project) => void;
+  onDetails: (project: Project, trigger: HTMLButtonElement) => void;
 }) {
   const { locale, t } = useLanguage();
   return (
@@ -39,7 +39,10 @@ export function ProjectCard({
           ))}
         </ul>
         <div className="project-actions">
-          <button className="text-button" onClick={() => onDetails(project)}>
+          <button
+            className="text-button"
+            onClick={(event) => onDetails(project, event.currentTarget)}
+          >
             {t.projects.details}
             <ArrowUpRight size={16} aria-hidden="true" />
           </button>
@@ -47,7 +50,7 @@ export function ProjectCard({
             <a
               href={project.githubUrl}
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
               aria-label={`${t.projects.github}: ${project.title}`}
             >
               <GitBranch size={18} aria-hidden="true" />
@@ -57,7 +60,7 @@ export function ProjectCard({
             <a
               href={project.liveUrl}
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
               aria-label={`${t.projects.live}: ${project.title}`}
             >
               <ArrowUpRight size={18} aria-hidden="true" />

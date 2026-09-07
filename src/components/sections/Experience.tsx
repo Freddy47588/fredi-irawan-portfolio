@@ -9,7 +9,7 @@ export function Experience() {
   return (
     <section id="experience" className="section section-tinted">
       <div className="container">
-        <Reveal>
+        <Reveal direction="left">
           <SectionHeading
             eyebrow={t.experience.eyebrow}
             title={t.experience.title}
@@ -17,8 +17,8 @@ export function Experience() {
           />
         </Reveal>
         <div className="experience-list">
-          {experiences.map((item) => (
-            <Reveal key={item.id} className="experience-card">
+          {experiences.map((item, index) => (
+            <Reveal key={item.id} className="experience-card" delay={(index % 2) * 80}>
               <div className="experience-lead">
                 <BriefcaseBusiness size={23} aria-hidden="true" />
                 <p className="timeline-type">{item.role[locale]}</p>

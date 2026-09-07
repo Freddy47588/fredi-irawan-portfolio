@@ -58,7 +58,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="section contact-section">
-      <Reveal className="container contact-inner">
+      <Reveal className="container contact-inner" direction="scale">
         <div>
           <p className="eyebrow">{t.contact.eyebrow}</p>
           <h2>{t.contact.title}</h2>

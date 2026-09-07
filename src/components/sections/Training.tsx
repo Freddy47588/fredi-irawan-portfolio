@@ -10,7 +10,7 @@ export function Training() {
     <section className="section section-tinted" aria-labelledby="training-title">
       <div className="container training-layout">
         <div>
-          <Reveal>
+          <Reveal direction="left">
             <SectionHeading
               eyebrow={t.training.eyebrow}
               title={t.training.title}
@@ -18,8 +18,8 @@ export function Training() {
             />
           </Reveal>
           <div className="training-grid">
-            {training.map((item) => (
-              <Reveal key={item.id} className="training-card">
+            {training.map((item, index) => (
+              <Reveal key={item.id} className="training-card" delay={(index % 2) * 70}>
                 <div className="training-card-top">
                   <School size={20} aria-hidden="true" />
                   {item.grade && (
@@ -35,7 +35,7 @@ export function Training() {
             ))}
           </div>
         </div>
-        <Reveal className="milestone-card">
+        <Reveal className="milestone-card" direction="right" delay={80}>
           <Code2 size={26} aria-hidden="true" />
           <p className="eyebrow">Java · OOP</p>
           <h3>{t.training.milestone}</h3>

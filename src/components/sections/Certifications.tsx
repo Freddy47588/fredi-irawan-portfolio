@@ -15,7 +15,7 @@ export function Certifications() {
   return (
     <section id="certifications" className="section">
       <div className="container">
-        <Reveal>
+        <Reveal direction="left">
           <SectionHeading
             eyebrow={t.certificates.eyebrow}
             title={t.certificates.title}
@@ -23,8 +23,8 @@ export function Certifications() {
           />
         </Reveal>
         <div className="certificate-grid">
-          {visible.map((certificate) => (
-            <Reveal key={certificate.id} className="certificate-card">
+          {visible.map((certificate, index) => (
+            <Reveal key={certificate.id} className="certificate-card" delay={(index % 2) * 70}>
               <div className="certificate-preview">
                 {certificate.image ? (
                   <img
@@ -33,10 +33,12 @@ export function Certifications() {
                     loading="lazy"
                   />
                 ) : (
-                  <>
-                    <Award size={29} aria-hidden="true" />
-                    <span>{t.certificates.placeholder}</span>
-                  </>
+                  <div className="credential-fallback" aria-hidden="true">
+                    <Award size={29} />
+                    <strong>{t.certificates.category[certificate.category]}</strong>
+                    <span>{certificate.issuer}</span>
+                    <span>{certificate.year}</span>
+                  </div>
                 )}
               </div>
               <div className="certificate-copy">
@@ -48,7 +50,7 @@ export function Certifications() {
                 <p>{certificate.issuer}</p>
                 {certificate.detail && <small>{certificate.detail[locale]}</small>}
                 {certificate.credentialUrl && (
-                  <a href={certificate.credentialUrl} target="_blank" rel="noreferrer">
+                  <a href={certificate.credentialUrl} target="_blank" rel="noreferrer noopener">
                     {t.certificates.credential}
                     <ExternalLink size={15} aria-hidden="true" />
                   </a>

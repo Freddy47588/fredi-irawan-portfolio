@@ -23,8 +23,23 @@ export function useTheme() {
       /* Storage may be unavailable. */
     }
   }, [theme]);
+
+  const toggleTheme = () => {
+    const update = () => setTheme((current) => (current === 'dark' ? 'light' : 'dark'));
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const transitionDocument = document as Document & {
+      startViewTransition?: (callback: () => void) => unknown;
+    };
+
+    if (!reducedMotion && transitionDocument.startViewTransition) {
+      transitionDocument.startViewTransition(update);
+    } else {
+      update();
+    }
+  };
+
   return {
     theme,
-    toggleTheme: () => setTheme((current) => (current === 'dark' ? 'light' : 'dark')),
+    toggleTheme,
   };
 }

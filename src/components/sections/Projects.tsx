@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { ArrowUpRight, GitBranch } from 'lucide-react';
 import { projects } from '../../data/projects';
 import { useLanguage } from '../../hooks/useLanguage';
@@ -15,6 +15,7 @@ export function Projects() {
   const { locale, t } = useLanguage();
   const [filter, setFilter] = useState<Filter>('All');
   const [selected, setSelected] = useState<Project | null>(null);
+  const dialogTriggerRef = useRef<HTMLElement | null>(null);
   const featured = useMemo(
     () =>
       projects.filter(
@@ -32,11 +33,15 @@ export function Projects() {
 
   const filterLabel = (value: Filter) =>
     value === 'All' ? t.projects.all : t.projects.filters[value];
+  const openProject = (project: Project, trigger: HTMLElement) => {
+    dialogTriggerRef.current = trigger;
+    setSelected(project);
+  };
 
   return (
     <section id="projects" className="section">
       <div className="container">
-        <Reveal>
+        <Reveal direction="left">
           <SectionHeading
             eyebrow={t.projects.eyebrow}
             title={t.projects.title}
@@ -58,13 +63,15 @@ export function Projects() {
 
         {featured.length > 0 && (
           <div aria-labelledby="featured-projects-title">
-            <h3 id="featured-projects-title" className="subsection-title">
-              {t.projects.featured}
-            </h3>
-            <div className="projects-grid">
-              {featured.map((project) => (
-                <Reveal key={project.id}>
-                  <ProjectCard project={project} onDetails={setSelected} />
+            <Reveal direction="left">
+              <h3 id="featured-projects-title" className="subsection-title">
+                {t.projects.featured}
+              </h3>
+            </Reveal>
+            <div className="projects-grid project-filter-results" key={`featured-${filter}`}>
+              {featured.map((project, index) => (
+                <Reveal key={project.id} delay={(index % 2) * 80}>
+                  <ProjectCard project={project} onDetails={openProject} />
                 </Reveal>
               ))}
             </div>
@@ -73,41 +80,48 @@ export function Projects() {
 
         {archive.length > 0 && (
           <div className="project-archive" aria-labelledby="project-archive-title">
-            <div className="archive-heading">
-              <h3 id="project-archive-title">{t.projects.archive}</h3>
-              <p>{t.projects.archiveDescription}</p>
-            </div>
-            <div className="archive-grid">
-              {archive.map((project) => (
-                <article className="archive-card" key={project.id}>
-                  <div className="archive-meta">
-                    <span>{project.year}</span>
-                    <span>{t.projects.status[project.status]}</span>
-                  </div>
-                  <h4>{project.title}</h4>
-                  <p>{project.description[locale]}</p>
-                  <ul className="tag-list" aria-label={t.projects.technology}>
-                    {project.technologies.slice(0, 3).map((technology) => (
-                      <li key={technology}>{technology}</li>
-                    ))}
-                  </ul>
-                  <div className="archive-actions">
-                    <button className="text-button" onClick={() => setSelected(project)}>
-                      {t.projects.details}
-                      <ArrowUpRight size={16} aria-hidden="true" />
-                    </button>
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label={`${t.projects.github}: ${project.title}`}
+            <Reveal direction="left">
+              <div className="archive-heading">
+                <h3 id="project-archive-title">{t.projects.archive}</h3>
+                <p>{t.projects.archiveDescription}</p>
+              </div>
+            </Reveal>
+            <div className="archive-grid project-filter-results" key={`archive-${filter}`}>
+              {archive.map((project, index) => (
+                <Reveal key={project.id} delay={(index % 3) * 60} className="archive-card-wrap">
+                  <article className="archive-card">
+                    <div className="archive-meta">
+                      <span>{project.year}</span>
+                      <span>{t.projects.status[project.status]}</span>
+                    </div>
+                    <h4>{project.title}</h4>
+                    <p>{project.description[locale]}</p>
+                    <ul className="tag-list" aria-label={t.projects.technology}>
+                      {project.technologies.slice(0, 3).map((technology) => (
+                        <li key={technology}>{technology}</li>
+                      ))}
+                    </ul>
+                    <div className="archive-actions">
+                      <button
+                        className="text-button"
+                        onClick={(event) => openProject(project, event.currentTarget)}
                       >
-                        <GitBranch size={17} aria-hidden="true" />
-                      </a>
-                    )}
-                  </div>
-                </article>
+                        {t.projects.details}
+                        <ArrowUpRight size={16} aria-hidden="true" />
+                      </button>
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          aria-label={`${t.projects.github}: ${project.title}`}
+                        >
+                          <GitBranch size={17} aria-hidden="true" />
+                        </a>
+                      )}
+                    </div>
+                  </article>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -117,7 +131,11 @@ export function Projects() {
           <p className="empty-state">{t.projects.empty}</p>
         )}
       </div>
-      <ProjectDialog project={selected} onClose={() => setSelected(null)} />
+      <ProjectDialog
+        project={selected}
+        triggerRef={dialogTriggerRef}
+        onClose={() => setSelected(null)}
+      />
     </section>
   );
 }

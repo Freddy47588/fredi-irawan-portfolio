@@ -10,7 +10,7 @@ export function Skills() {
   return (
     <section id="skills" className="section section-tinted">
       <div className="container">
-        <Reveal>
+        <Reveal direction="left">
           <SectionHeading
             eyebrow={t.skills.eyebrow}
             title={t.skills.title}
@@ -21,7 +21,7 @@ export function Skills() {
           {skillGroups.map((group, index) => {
             const Icon = icons[index] ?? Code2;
             return (
-              <Reveal key={group.id} className="skill-card">
+              <Reveal key={group.id} className="skill-card" delay={(index % 3) * 70}>
                 <Icon size={22} aria-hidden="true" />
                 <h3>{group.title[locale]}</h3>
                 <ul>

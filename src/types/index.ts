@@ -101,6 +101,8 @@ export interface Translation {
     projects: string;
     github: string;
     availability: string;
+    workspace: string;
+    workspaceFocus: [string, string, string];
   };
   about: {
     eyebrow: string;
@@ -137,7 +139,13 @@ export interface Translation {
     filters: Record<ProjectCategory, string>;
   };
   experience: { eyebrow: string; title: string; description: string; highlights: string };
-  education: { eyebrow: string; title: string; description: string; ongoing: string };
+  education: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    ongoing: string;
+    earlier: string;
+  };
   training: {
     eyebrow: string;
     title: string;
@@ -152,7 +160,6 @@ export interface Translation {
     description: string;
     viewMore: string;
     showLess: string;
-    placeholder: string;
     credential: string;
     category: Record<CertificateCategory, string>;
   };

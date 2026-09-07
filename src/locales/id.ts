@@ -19,12 +19,14 @@ export const id: Translation = {
   theme: { light: 'Gunakan tema terang', dark: 'Gunakan tema gelap' },
   hero: {
     eyebrow: 'Mahasiswa Teknik Informatika · Software Developer',
-    title: 'Membangun perangkat lunak praktis untuk masalah nyata.',
+    title: 'Membangun aplikasi web, mobile, dan berbasis data untuk kebutuhan nyata.',
     description:
-      'Mahasiswa Teknik Informatika dan software developer yang mengembangkan solusi praktis di bidang web, mobile, GIS, analitik data, computer vision, dan teknologi interaktif.',
+      'Mahasiswa Teknik Informatika dan software developer yang mengembangkan solusi praktis di bidang web, mobile, GIS, analitik data, dan computer vision.',
     projects: 'Jelajahi proyek',
     github: 'Profil GitHub',
     availability: 'Terbuka untuk peluang dan kolaborasi',
+    workspace: 'Ruang kerja developer',
+    workspaceFocus: ['Web & Mobile', 'GIS & Data', 'Computer Vision'],
   },
   about: {
     eyebrow: 'Tentang',
@@ -91,6 +93,7 @@ export const id: Translation = {
     description:
       'Dari pendidikan kejuruan bidang teknologi hingga program S1 Teknik Informatika yang masih ditempuh.',
     ongoing: 'Sedang ditempuh',
+    earlier: 'Pendidikan Sebelumnya',
   },
   training: {
     eyebrow: 'Pelatihan / Kelas Industri',
@@ -109,7 +112,6 @@ export const id: Translation = {
       'Kredensial pilihan dengan prioritas pada relevansi teknis dan tonggak pembelajaran terverifikasi.',
     viewMore: 'Lihat kredensial lainnya',
     showLess: 'Tampilkan lebih sedikit',
-    placeholder: 'Pratinjau dapat ditambahkan nanti',
     credential: 'Lihat kredensial',
     category: {
       training: 'Pelatihan',

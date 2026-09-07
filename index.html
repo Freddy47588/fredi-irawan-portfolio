@@ -6,31 +6,43 @@
     <meta name="theme-color" content="#07111f" />
     <meta
       name="description"
-      content="Developer portfolio of Fredi Irawan, an Informatics student showcasing projects in web development, mobile applications, GIS, data analytics, computer vision, and interactive technology."
+      content="Fredi Irawan is an Informatics student and software developer creating reliable applications across web, mobile, GIS, data analytics, and computer vision."
     />
     <meta property="og:title" content="Fredi Irawan | Software Developer Portfolio" />
     <meta
       property="og:description"
-      content="Developer portfolio of Fredi Irawan, an Informatics student working across web, mobile, GIS, data analytics, computer vision, and interactive technology."
+      content="An Informatics student and software developer creating reliable web, mobile, GIS, data analytics, and computer vision applications."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://freddy47588.github.io/fredi-irawan-portfolio/" />
     <meta
       property="og:image"
-      content="https://freddy47588.github.io/fredi-irawan-portfolio/social-preview.svg"
+      content="https://freddy47588.github.io/fredi-irawan-portfolio/social-preview.png"
     />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Fredi Irawan — Software Developer Portfolio" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Fredi Irawan | Software Developer Portfolio" />
     <meta
       name="twitter:description"
-      content="Developer portfolio of Fredi Irawan, an Informatics student working across web, mobile, GIS, data analytics, computer vision, and interactive technology."
+      content="An Informatics student and software developer creating reliable web, mobile, GIS, data analytics, and computer vision applications."
     />
+    <meta
+      name="twitter:image"
+      content="https://freddy47588.github.io/fredi-irawan-portfolio/social-preview.png"
+    />
+    <meta name="twitter:image:alt" content="Fredi Irawan — Software Developer Portfolio" />
     <link rel="canonical" href="https://freddy47588.github.io/fredi-irawan-portfolio/" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <script>
       try {
         const savedTheme = localStorage.getItem('portfolio-theme');
-        document.documentElement.classList.toggle('dark', savedTheme !== 'light');
+        const isDark = savedTheme !== 'light';
+        document.documentElement.classList.toggle('dark', isDark);
+        document
+          .querySelector('meta[name="theme-color"]')
+          ?.setAttribute('content', isDark ? '#07111f' : '#f7f8fa');
       } catch {
         document.documentElement.classList.add('dark');
       }

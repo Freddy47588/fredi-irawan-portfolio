@@ -19,12 +19,14 @@ export const en: Translation = {
   theme: { light: 'Use light theme', dark: 'Use dark theme' },
   hero: {
     eyebrow: 'Informatics Student · Software Developer',
-    title: 'Building practical software for real-world problems.',
+    title: 'Building practical web, mobile, and data-driven software.',
     description:
-      'Informatics student and software developer building practical solutions across web, mobile, GIS, data analytics, computer vision, and interactive technology.',
+      'Informatics student and software developer creating reliable applications across web, mobile, GIS, data analytics, and computer vision.',
     projects: 'Explore projects',
     github: 'GitHub profile',
     availability: 'Open to opportunities and collaboration',
+    workspace: 'Developer workspace',
+    workspaceFocus: ['Web & Mobile', 'GIS & Data', 'Computer Vision'],
   },
   about: {
     eyebrow: 'About',
@@ -91,6 +93,7 @@ export const en: Translation = {
     description:
       'From vocational technology education to an undergraduate Informatics program currently in progress.',
     ongoing: 'In progress',
+    earlier: 'Earlier Education',
   },
   training: {
     eyebrow: 'Training / Industry Class',
@@ -109,7 +112,6 @@ export const en: Translation = {
       'Selected credentials with priority given to technical relevance and verified learning milestones.',
     viewMore: 'View more credentials',
     showLess: 'Show fewer credentials',
-    placeholder: 'Preview can be added later',
     credential: 'View credential',
     category: {
       training: 'Training',
