@@ -50,27 +50,29 @@ export function Education() {
             </Reveal>
           ))}
         </div>
-        <div className="earlier-education" aria-labelledby="earlier-education-title">
-          <Reveal direction="left">
-            <h3 id="earlier-education-title" className="subsection-title">
-              {t.education.earlier}
-            </h3>
-          </Reveal>
-          <div className="earlier-education-list">
-            {earlierEducation.map((item, index) => (
-              <Reveal key={item.id} className="earlier-education-item" delay={index * 70}>
-                <div className="education-icon">
-                  <BookOpen aria-hidden="true" />
-                </div>
-                <div>
-                  <p className="timeline-type">{item.level[locale]}</p>
-                  <h4>{item.institution}</h4>
-                  <p>{item.description[locale]}</p>
-                </div>
-              </Reveal>
-            ))}
+        {earlierEducation.length > 0 && (
+          <div className="earlier-education" aria-labelledby="earlier-education-title">
+            <Reveal direction="left">
+              <h3 id="earlier-education-title" className="subsection-title">
+                {t.education.earlier}
+              </h3>
+            </Reveal>
+            <div className="earlier-education-list">
+              {earlierEducation.map((item, index) => (
+                <Reveal key={item.id} className="earlier-education-item" delay={index * 70}>
+                  <div className="education-icon">
+                    <BookOpen aria-hidden="true" />
+                  </div>
+                  <div>
+                    <p className="timeline-type">{item.level[locale]}</p>
+                    <h4>{item.institution}</h4>
+                    <p>{item.description[locale]}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );

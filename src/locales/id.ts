@@ -102,9 +102,9 @@ export const id: Translation = {
     description:
       'Tonggak teknis awal yang diselesaikan saat SMK melalui kelas industri di SMK Negeri 11 Malang.',
     grade: 'Nilai',
-    milestone: 'Tonggak pemrograman awal',
+    milestone: 'Fondasi pemrograman kejuruan',
     milestoneDescription:
-      'Aplikasi Kalkulator Persegi Panjang — mini-project Java yang membahas class, object, variabel, logika kondisional, dan dasar pemrograman berorientasi objek.',
+      'Menyelesaikan empat jalur pembelajaran terstruktur di bidang Front-End, Back-End, dan Android, termasuk mini-project awal pemrograman berorientasi objek dengan Java.',
   },
   certificates: {
     eyebrow: 'Kredensial',

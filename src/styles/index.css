@@ -939,8 +939,20 @@ a:focus-visible {
   line-height: 1.1;
   letter-spacing: -0.04em;
 }
+.dialog-preview {
+  margin-top: 1.35rem;
+  border: 1px solid var(--line);
+  background: var(--surface-soft);
+  overflow: hidden;
+}
+.dialog-preview img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 12 / 7;
+  object-fit: cover;
+}
 .dialog-copy {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 .dialog-copy h3 {
   margin: 1.25rem 0 0.3rem;
@@ -962,39 +974,6 @@ a:focus-visible {
   padding-left: 1.2rem;
 }
 
-.experience-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.75fr);
-  gap: clamp(3rem, 8vw, 7rem);
-  align-items: start;
-}
-.timeline {
-  position: relative;
-  padding-left: 1.8rem;
-}
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 4px;
-  top: 8px;
-  bottom: 10px;
-  width: 1px;
-  background: var(--line);
-}
-.timeline-item {
-  position: relative;
-  padding: 0 0 3rem;
-}
-.timeline-dot {
-  position: absolute;
-  left: -1.79rem;
-  top: 0.55rem;
-  width: 9px;
-  height: 9px;
-  border: 2px solid var(--bg);
-  background: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-soft);
-}
 .timeline-type {
   margin: 0 0 0.35rem !important;
   color: var(--accent-strong) !important;
@@ -1005,27 +984,6 @@ a:focus-visible {
 }
 .dark .timeline-type {
   color: var(--accent) !important;
-}
-.timeline-item h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.2rem;
-}
-.timeline-item > p {
-  max-width: 650px;
-  margin: 0 0 1rem;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-.timeline-item .tag-list {
-  margin-top: 1rem;
-}
-.education-card {
-  position: sticky;
-  top: 100px;
-  padding: 2rem;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  box-shadow: var(--shadow);
 }
 
 .experience-list {
@@ -1345,40 +1303,6 @@ a:focus-visible {
   margin-top: 1.4rem;
   cursor: pointer;
 }
-.education-card > svg {
-  margin-bottom: 1.5rem;
-  color: var(--accent-strong);
-}
-.education-card h2 {
-  margin: 0;
-  font-size: 1.7rem;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-}
-.education-card > p:not(.eyebrow) {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-.education-item {
-  margin-top: 1.8rem;
-  padding-top: 1.3rem;
-  border-top: 1px solid var(--line);
-}
-.education-item h3 {
-  margin: 0 0 0.35rem;
-  font-size: 1rem;
-}
-.education-item p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.84rem;
-}
-.education-item span {
-  display: block;
-  margin-top: 0.6rem;
-  color: var(--muted);
-  font-size: 0.73rem;
-}
 
 .contact-section {
   overflow: hidden;
@@ -1515,7 +1439,6 @@ a:focus-visible {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .experience-layout,
   .contact-inner {
     grid-template-columns: 1fr;
   }
@@ -1530,9 +1453,6 @@ a:focus-visible {
   }
   .certificate-card {
     grid-template-columns: 115px minmax(0, 1fr);
-  }
-  .education-card {
-    position: static;
   }
 }
 

@@ -1,1 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420"><rect width="720" height="420" fill="#0c1726"/><g stroke="#1e334a"><path d="M70 70v270h590M70 115h590M70 160h590M70 205h590M70 250h590M70 295h590"/></g><path d="M80 300c52-16 78-70 127-60s66-81 120-52 84-94 132-38 87-51 184-69" fill="none" stroke="#5eead4" stroke-width="5"/><path d="M80 318c80-13 102-37 155-24s89-43 137-17 106-71 161-41 77-43 110-54" fill="none" stroke="#818cf8" stroke-width="3" stroke-dasharray="9 8"/><g fill="#5eead4"><circle cx="207" cy="240" r="6"/><circle cx="327" cy="188" r="6"/><circle cx="459" cy="150" r="6"/><circle cx="643" cy="81" r="6"/></g><text x="70" y="382" fill="#94a3b8" font-family="Arial" font-size="17" letter-spacing="3">ANALYTICS / ARIMA FORECAST</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07111f" />
+      <stop offset="100%" stop-color="#0d1d31" />
+    </linearGradient>
+    <linearGradient id="band" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5eead4" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#5eead4" stop-opacity="0.04" />
+    </linearGradient>
+  </defs>
+
+  <rect width="720" height="420" fill="url(#bg)" />
+
+  <!-- Outer Frame -->
+  <rect x="38" y="26" width="644" height="336" rx="14" fill="#0b1727" stroke="#213650" stroke-width="1.5" />
+  <path d="M38 40a14 14 0 0 1 14-14h616a14 14 0 0 1 14 14v28H38Z" fill="#102136" />
+  <line x1="38" y1="68" x2="682" y2="68" stroke="#213650" />
+  <text x="60" y="52" fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13.5" font-weight="800">Wearemania Analytics · Editorial Traffic &amp; ARIMA Forecasting</text>
+  <rect x="536" y="36" width="128" height="22" rx="11" fill="#0d9488" fill-opacity="0.2" stroke="#2dd4bf" />
+  <text x="550" y="51" fill="#5eead4" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">DJANGO · ARIMA</text>
+
+  <!-- Pipeline Header Pills -->
+  <rect x="58" y="84" width="188" height="46" rx="8" fill="#102136" stroke="#213854" />
+  <text x="74" y="103" fill="#5eead4" font-family="ui-monospace, monospace" font-size="9.5" font-weight="700">01 // CSV INGESTION</text>
+  <text x="74" y="120" fill="#e2e8f0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11.5" font-weight="700">Validation &amp; Deduplication</text>
+
+  <rect x="264" y="84" width="192" height="46" rx="8" fill="#102136" stroke="#213854" />
+  <text x="280" y="103" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="9.5" font-weight="700">02 // URL NORMALIZATION</text>
+  <text x="280" y="120" fill="#e2e8f0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11.5" font-weight="700">Editorial Category Mapping</text>
+
+  <rect x="474" y="84" width="188" height="46" rx="8" fill="#102136" stroke="#2dd4bf" stroke-opacity="0.5" />
+  <text x="490" y="103" fill="#818cf8" font-family="ui-monospace, monospace" font-size="9.5" font-weight="700">03 // TIME-SERIES MODEL</text>
+  <text x="490" y="120" fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11.5" font-weight="700">ARIMA Horizon &amp; CI Band</text>
+
+  <!-- Chart Container -->
+  <rect x="58" y="144" width="604" height="198" rx="10" fill="#0e1e32" stroke="#1e344e" />
+  <g stroke="#1a2f47" stroke-width="1">
+    <path d="M84 176h554M84 216h554M84 256h554M84 296h554" />
+  </g>
+
+  <!-- Forecast Horizon Split Line -->
+  <line x1="452" y1="160" x2="452" y2="322" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 5" />
+  <rect x="462" y="162" width="164" height="20" rx="4" fill="#172a42" />
+  <text x="472" y="176" fill="#a5b4fc" font-family="ui-monospace, monospace" font-size="10" font-weight="700">FORECAST HORIZON (95% CI)</text>
+
+  <!-- Confidence Interval Shaded Band -->
+  <path d="M452 212 C 498 188, 545 192, 628 164 L 628 228 C 545 244, 498 236, 452 212 Z" fill="url(#band)" />
+
+  <!-- Historical Series -->
+  <path d="M88 288 C 135 276, 165 232, 212 246 C 258 260, 292 198, 342 216 C 388 232, 415 190, 452 212" fill="none" stroke="#38bdf8" stroke-width="3.5" />
+
+  <!-- Predicted ARIMA Series -->
+  <path d="M452 212 C 498 206, 545 214, 628 192" fill="none" stroke="#5eead4" stroke-width="3.5" stroke-dasharray="8 6" />
+
+  <!-- Data Points -->
+  <g fill="#38bdf8">
+    <circle cx="152" cy="252" r="4.5" />
+    <circle cx="212" cy="246" r="4.5" />
+    <circle cx="282" cy="222" r="4.5" />
+    <circle cx="342" cy="216" r="4.5" />
+    <circle cx="452" cy="212" r="6" fill="#5eead4" stroke="#0b1727" stroke-width="2" />
+  </g>
+  <g fill="#5eead4">
+    <circle cx="515" cy="209" r="4.5" />
+    <circle cx="572" cy="204" r="4.5" />
+    <circle cx="628" cy="192" r="5" />
+  </g>
+</svg>

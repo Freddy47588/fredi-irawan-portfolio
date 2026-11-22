@@ -40,38 +40,6 @@ export const certificates: Certificate[] = [
     featured: true,
   },
   {
-    id: 'rakryan-frontend-discover',
-    title: { en: 'Front-End Development — Discover', id: 'Front-End Development — Discover' },
-    issuer: 'Rakryan Digital Academy',
-    year: 2020,
-    category: 'training',
-    detail: { en: 'Grade B', id: 'Nilai B' },
-    featured: true,
-  },
-  {
-    id: 'rakryan-backend-discover',
-    title: { en: 'Back-End Development — Discover', id: 'Back-End Development — Discover' },
-    issuer: 'Rakryan Digital Academy',
-    year: 2020,
-    category: 'training',
-    detail: { en: 'Grade B', id: 'Nilai B' },
-  },
-  {
-    id: 'rakryan-android-discover',
-    title: { en: 'Android Development — Discover', id: 'Android Development — Discover' },
-    issuer: 'Rakryan Digital Academy',
-    year: 2020,
-    category: 'training',
-    detail: { en: 'Grade B', id: 'Nilai B' },
-  },
-  {
-    id: 'rakryan-frontend-exploration',
-    title: { en: 'Front-End — Exploration', id: 'Front-End — Exploration' },
-    issuer: 'Rakryan Digital Academy',
-    year: 2021,
-    category: 'training',
-  },
-  {
     id: 'cybersecurity-awareness',
     title: {
       en: 'Introduction to Cybersecurity Awareness',
@@ -80,5 +48,20 @@ export const certificates: Certificate[] = [
     issuer: 'Technical Training',
     year: 2025,
     category: 'technical',
+    featured: true,
+  },
+  {
+    id: 'rakryan-industry-class',
+    title: {
+      en: 'Rakryan Digital Academy — Industry Class Program (4 Tracks)',
+      id: 'Rakryan Digital Academy — Program Kelas Industri (4 Jalur)',
+    },
+    issuer: 'Rakryan Digital Academy · SMK Negeri 11 Malang',
+    year: 2021,
+    category: 'training',
+    detail: {
+      en: 'Front-End Discover & Exploration, Back-End Discover, and Android Development Discover (Grade B)',
+      id: 'Front-End Discover & Exploration, Back-End Discover, serta Android Development Discover (Nilai B)',
+    },
   },
 ];

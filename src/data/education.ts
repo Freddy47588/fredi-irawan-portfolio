@@ -10,9 +10,15 @@ export const education: Education[] = [
     period: { en: '2023 – Present', id: '2023 – Sekarang' },
     status: { en: 'Present / In Progress', id: 'Sedang Ditempuh' },
     description: {
-      en: "Currently pursuing a Bachelor's degree in Informatics.",
-      id: 'Saat ini masih menempuh pendidikan S1 Teknik Informatika.',
+      en: "Currently pursuing a Bachelor's degree in Informatics with a focus on software engineering, data-driven applications, and computer vision.",
+      id: 'Saat ini menempuh pendidikan S1 Teknik Informatika dengan fokus pada rekayasa perangkat lunak, aplikasi berbasis data, dan computer vision.',
     },
+    learningAreas: [
+      { en: 'Software engineering', id: 'Rekayasa perangkat lunak' },
+      { en: 'Computer vision', id: 'Computer vision' },
+      { en: 'Web & mobile systems', id: 'Sistem web & mobile' },
+      { en: 'Data & spatial analysis', id: 'Analisis data & spasial' },
+    ],
     featured: true,
   },
   {
@@ -34,25 +40,5 @@ export const education: Education[] = [
       { en: 'Web development', id: 'Pengembangan web' },
     ],
     featured: true,
-  },
-  {
-    id: 'smpn-15',
-    institution: 'SMP Negeri 15 Malang',
-    level: { en: 'Junior High School', id: 'Sekolah Menengah Pertama' },
-    description: {
-      en: 'General secondary education in Malang.',
-      id: 'Pendidikan menengah pertama di Malang.',
-    },
-    featured: false,
-  },
-  {
-    id: 'sdn-2-kalisongo',
-    institution: 'SD Negeri 2 Kalisongo Malang',
-    level: { en: 'Elementary School', id: 'Sekolah Dasar' },
-    description: {
-      en: 'Primary education in Malang.',
-      id: 'Pendidikan dasar di Malang.',
-    },
-    featured: false,
   },
 ];

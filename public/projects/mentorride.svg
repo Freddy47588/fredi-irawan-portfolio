@@ -1,1 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420"><rect width="720" height="420" fill="#101826"/><rect x="255" y="36" width="210" height="350" rx="28" fill="#182638" stroke="#64748b"/><rect x="272" y="64" width="176" height="286" rx="12" fill="#eef6f5"/><circle cx="360" cy="369" r="8" fill="#5eead4"/><text x="292" y="102" fill="#102020" font-family="Arial" font-size="18" font-weight="700">Good morning, Fredi</text><rect x="292" y="122" width="136" height="64" rx="8" fill="#0f766e"/><path d="M315 163h90l-12-22h-56z" fill="none" stroke="#fff" stroke-width="4"/><rect x="292" y="204" width="61" height="61" rx="8" fill="#d9e5e3"/><rect x="367" y="204" width="61" height="61" rx="8" fill="#d9e5e3"/><rect x="292" y="282" width="136" height="8" rx="4" fill="#bdcfcc"/><rect x="292" y="301" width="98" height="8" rx="4" fill="#bdcfcc"/><text x="40" y="382" fill="#94a3b8" font-family="Arial" font-size="18" letter-spacing="3">MOBILE / VEHICLE CARE</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07111f" />
+      <stop offset="100%" stop-color="#0f2236" />
+    </linearGradient>
+    <linearGradient id="tealCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#0f766e" />
+    </linearGradient>
+  </defs>
+
+  <rect width="720" height="420" fill="url(#bg)" />
+  <circle cx="520" cy="190" r="190" fill="#2dd4bf" opacity="0.08" />
+
+  <!-- Left Telemetry & Feature Highlights -->
+  <rect x="46" y="42" width="320" height="316" rx="16" fill="#0c1a2b" stroke="#20364f" stroke-width="1.5" />
+  <rect x="68" y="64" width="136" height="22" rx="11" fill="#0d9488" fill-opacity="0.2" stroke="#2dd4bf" />
+  <text x="82" y="79" fill="#5eead4" font-family="ui-monospace, monospace" font-size="10.5" font-weight="800">FLUTTER · RIVERPOD</text>
+
+  <text x="68" y="118" fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="800">MentorRide</text>
+  <text x="68" y="140" fill="#94a3b8" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12.5">Motorcycle Service &amp; Maintenance Log</text>
+
+  <!-- Service Interval Card -->
+  <rect x="68" y="160" width="276" height="82" rx="10" fill="#11243a" stroke="#233d5a" />
+  <text x="84" y="182" fill="#5eead4" font-family="ui-monospace, monospace" font-size="10" font-weight="700">NEXT SCHEDULED SERVICE</text>
+  <text x="84" y="204" fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="700">Engine Oil &amp; CVT Belt Inspection</text>
+  <rect x="84" y="218" width="244" height="7" rx="3.5" fill="#091320" />
+  <rect x="84" y="218" width="192" height="7" rx="3.5" fill="#2dd4bf" />
+
+  <!-- Expense Analytics Mini Card -->
+  <rect x="68" y="254" width="276" height="82" rx="10" fill="#11243a" stroke="#233d5a" />
+  <text x="84" y="276" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="10" font-weight="700">FIRESTORE SYNC · COST ANALYTICS</text>
+  <path d="M84 318 L 128 304 L 172 312 L 216 290 L 260 296 L 318 278" fill="none" stroke="#5eead4" stroke-width="3" stroke-linecap="round" />
+  <circle cx="216" cy="290" r="4.5" fill="#5eead4" />
+  <circle cx="318" cy="278" r="4.5" fill="#5eead4" />
+
+  <!-- Right Mobile Phone Frame -->
+  <rect x="398" y="24" width="268" height="344" rx="28" fill="#13253a" stroke="#334e6b" stroke-width="2" />
+  <rect x="412" y="42" width="240" height="310" rx="18" fill="#0a1524" />
+  <rect x="498" y="31" width="68" height="5" rx="2.5" fill="#334e6b" />
+
+  <!-- Mobile Screen Content -->
+  <rect x="428" y="60" width="208" height="74" rx="12" fill="url(#tealCard)" />
+  <text x="442" y="82" fill="#ccfbf1" font-family="ui-monospace, monospace" font-size="10" font-weight="700">ACTIVE VEHICLE</text>
+  <text x="442" y="104" fill="#ffffff" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="800">Vario 160 ABS</text>
+  <text x="442" y="122" fill="#ccfbf1" font-family="ui-monospace, monospace" font-size="11" font-weight="700">ODO: 12,450 km · Healthy</text>
+
+  <!-- Mobile Grid Widgets -->
+  <rect x="428" y="146" width="98" height="68" rx="10" fill="#112236" stroke="#223a54" />
+  <text x="440" y="168" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">SERVICES</text>
+  <text x="440" y="198" fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="22" font-weight="800">14</text>
+
+  <rect x="538" y="146" width="98" height="68" rx="10" fill="#112236" stroke="#223a54" />
+  <text x="550" y="168" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">REMINDERS</text>
+  <text x="550" y="198" fill="#5eead4" font-family="ui-sans-serif, system-ui, sans-serif" font-size="22" font-weight="800">02</text>
+
+  <!-- History List -->
+  <rect x="428" y="226" width="208" height="48" rx="10" fill="#112236" stroke="#223a54" />
+  <circle cx="448" cy="250" r="8" fill="#2dd4bf" fill-opacity="0.2" />
+  <circle cx="448" cy="250" r="4" fill="#5eead4" />
+  <text x="466" y="247" fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11.5" font-weight="700">Full Periodic Maintenance</text>
+  <text x="466" y="263" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="10">10,000 km · PDF Exported</text>
+
+  <rect x="428" y="284" width="208" height="48" rx="10" fill="#112236" stroke="#223a54" />
+  <circle cx="448" cy="308" r="8" fill="#38bdf8" fill-opacity="0.2" />
+  <circle cx="448" cy="308" r="4" fill="#38bdf8" />
+  <text x="466" y="305" fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11.5" font-weight="700">Brake Pad &amp; Fluid Check</text>
+  <text x="466" y="321" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="10">8,500 km · Completed</text>
+</svg>

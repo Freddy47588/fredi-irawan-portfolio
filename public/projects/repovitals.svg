@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07111f" />
+      <stop offset="100%" stop-color="#0d1b2e" />
+    </linearGradient>
+  </defs>
+
+  <rect width="720" height="420" fill="url(#bg)" />
+  <g stroke="#182a40" stroke-width="1" opacity="0.6">
+    <path d="M0 70h720M0 140h720M0 210h720M0 280h720M0 350h720M120 0v420M240 0v420M360 0v420M480 0v420M600 0v420" />
+  </g>
+
+  <!-- Main Dashboard Frame -->
+  <rect x="38" y="26" width="644" height="336" rx="14" fill="#0b1727" stroke="#213650" stroke-width="1.5" />
+  <path d="M38 40a14 14 0 0 1 14-14h616a14 14 0 0 1 14 14v28H38Z" fill="#102136" />
+  <line x1="38" y1="68" x2="682" y2="68" stroke="#213650" />
+  <text x="60" y="52" fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13.5" font-weight="800">RepoVitals · GitHub Repository Health &amp; Evidence Ledger</text>
+  <rect x="526" y="36" width="138" height="22" rx="11" fill="#0d9488" fill-opacity="0.2" stroke="#2dd4bf" />
+  <text x="540" y="51" fill="#5eead4" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">SHA TREE VERIFIED</text>
+
+  <!-- Left Health Score & Coverage Card -->
+  <rect x="56" y="84" width="224" height="260" rx="12" fill="#0f2034" stroke="#213752" />
+  <text x="76" y="110" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700" letter-spacing="1.2">HEALTH SUMMARY</text>
+
+  <!-- Circular Score Gauge -->
+  <circle cx="168" cy="184" r="56" fill="none" stroke="#192d45" stroke-width="12" />
+  <circle cx="168" cy="184" r="56" fill="none" stroke="#5eead4" stroke-width="12" stroke-dasharray="320 352" stroke-linecap="round" transform="rotate(-90 168 184)" />
+  <text x="141" y="192" fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="34" font-weight="800">92</text>
+  <text x="184" y="192" fill="#94a3b8" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="700">/100</text>
+
+  <rect x="76" y="262" width="184" height="32" rx="8" fill="#0b1727" stroke="#2dd4bf" stroke-opacity="0.4" />
+  <text x="92" y="282" fill="#5eead4" font-family="ui-monospace, monospace" font-size="11" font-weight="700">COVERAGE: 100% (≥80%)</text>
+  <text x="76" y="318" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="10.5">5 Categories · 0 Unknown</text>
+
+  <!-- Right 5-Category Evidence Breakdown -->
+  <rect x="296" y="84" width="368" height="260" rx="12" fill="#0f2034" stroke="#213752" />
+  <text x="318" y="110" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700" letter-spacing="1.2">CATEGORY LEDGER &amp; WORKFLOW SAMPLE</text>
+
+  <!-- Bar 1 -->
+  <text x="318" y="138" fill="#e2e8f0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700">Documentation &amp; Architecture</text>
+  <text x="606" y="138" fill="#5eead4" font-family="ui-monospace, monospace" font-size="11.5" font-weight="700">20 / 20</text>
+  <rect x="318" y="146" width="324" height="8" rx="4" fill="#182c44" />
+  <rect x="318" y="146" width="324" height="8" rx="4" fill="#2dd4bf" />
+
+  <!-- Bar 2 -->
+  <text x="318" y="178" fill="#e2e8f0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700">Repository Metadata &amp; Topics</text>
+  <text x="606" y="178" fill="#5eead4" font-family="ui-monospace, monospace" font-size="11.5" font-weight="700">20 / 20</text>
+  <rect x="318" y="186" width="324" height="8" rx="4" fill="#182c44" />
+  <rect x="318" y="186" width="324" height="8" rx="4" fill="#2dd4bf" />
+
+  <!-- Bar 3 -->
+  <text x="318" y="218" fill="#e2e8f0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700">Maintenance Signals (180d Window)</text>
+  <text x="606" y="218" fill="#5eead4" font-family="ui-monospace, monospace" font-size="11.5" font-weight="700">20 / 20</text>
+  <rect x="318" y="226" width="324" height="8" rx="4" fill="#182c44" />
+  <rect x="318" y="226" width="324" height="8" rx="4" fill="#38bdf8" />
+
+  <!-- Bar 4 -->
+  <text x="318" y="258" fill="#e2e8f0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700">CI / Automation &amp; Workflow Runs</text>
+  <text x="606" y="258" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="11.5" font-weight="700">16 / 20</text>
+  <rect x="318" y="266" width="324" height="8" rx="4" fill="#182c44" />
+  <rect x="318" y="266" width="260" height="8" rx="4" fill="#38bdf8" />
+
+  <!-- Bar 5 -->
+  <text x="318" y="298" fill="#e2e8f0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700">Community &amp; Governance Readiness</text>
+  <text x="606" y="298" fill="#818cf8" font-family="ui-monospace, monospace" font-size="11.5" font-weight="700">16 / 20</text>
+  <rect x="318" y="306" width="324" height="8" rx="4" fill="#182c44" />
+  <rect x="318" y="306" width="260" height="8" rx="4" fill="#818cf8" />
+</svg>

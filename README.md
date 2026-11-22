@@ -17,7 +17,7 @@ A production-ready bilingual portfolio for Fredi Irawan, an Informatics student 
 - Direct bilingual CV download from the hero
 - Reduced-motion support across reveal, hero, filter, dialog, and theme transitions
 - Static SEO metadata, a 1200 × 630 social preview, sitemap, robots file, and favicon
-- Automated GitHub Pages validation and deployment
+- Production hosting on Cloudflare Pages with automated GitHub Actions CI/CD validation
 
 ## 🛠 Tech Stack
 
@@ -129,11 +129,11 @@ The optimized static output is written to `dist/`.
 
 ## 🌐 Deployment
 
-`.github/workflows/deploy.yml` runs install, lint, typecheck, and build checks before deploying `dist/` to GitHub Pages. The Vite base path is derived from `GITHUB_REPOSITORY` in GitHub Actions, so repository project pages work without hardcoding the folder name.
+The primary production site is deployed on **Cloudflare Pages** at [`https://fredi-irawan-portfolio.pages.dev`](https://fredi-irawan-portfolio.pages.dev) with build command `npm run build` and output directory `dist`.
 
-In GitHub repository settings, select **Pages → Build and deployment → Source → GitHub Actions**.
+`.github/workflows/deploy.yml` also runs install, lint, typecheck, and build verification on every push to `main` (and supports optional GitHub Pages deployment). The Vite base path automatically adapts when built inside GitHub Actions for repository pages.
 
-If the repository or production domain changes, also update canonical and social metadata in:
+If the production domain changes, update canonical and social metadata in:
 
 - `index.html`
 - `public/robots.txt`

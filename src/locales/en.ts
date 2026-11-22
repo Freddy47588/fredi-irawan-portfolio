@@ -102,9 +102,9 @@ export const en: Translation = {
     description:
       'An early technical milestone completed during vocational school through the industry class at SMK Negeri 11 Malang.',
     grade: 'Grade',
-    milestone: 'Early programming milestone',
+    milestone: 'Vocational coding foundation',
     milestoneDescription:
-      'Rectangle Calculator Application — a Java mini-project covering classes, objects, variables, conditional logic, and basic object-oriented programming.',
+      'Completed four structured tracks across Front-End, Back-End, and Android development, culminating in an early Java object-oriented programming mini-project.',
   },
   certificates: {
     eyebrow: 'Credentials',

@@ -65,6 +65,17 @@ export function ProjectDialog({
             {project.categories.map((category) => t.projects.filters[category]).join(' · ')}
           </span>
           <h2>{project.title}</h2>
+          {project.image && (
+            <div className="dialog-preview">
+              <img
+                src={`${import.meta.env.BASE_URL}projects/${project.image}`}
+                alt={`${t.projects.imageAlt} ${project.title}`}
+                loading="lazy"
+                width="720"
+                height="420"
+              />
+            </div>
+          )}
           <div className="dialog-copy">
             <h3>{t.projects.overview}</h3>
             <p>{project.overview[locale]}</p>

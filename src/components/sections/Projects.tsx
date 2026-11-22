@@ -119,6 +119,16 @@ export function Projects() {
                           <GitBranch size={17} aria-hidden="true" />
                         </a>
                       )}
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          aria-label={`${t.projects.live}: ${project.title}`}
+                        >
+                          <ArrowUpRight size={17} aria-hidden="true" />
+                        </a>
+                      )}
                     </div>
                   </article>
                 </Reveal>

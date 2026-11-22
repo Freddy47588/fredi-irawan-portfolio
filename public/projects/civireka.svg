@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#071619" />
+      <stop offset="100%" stop-color="#0d2229" />
+    </linearGradient>
+  </defs>
+
+  <rect width="720" height="420" fill="url(#bg)" />
+
+  <!-- Main Frame -->
+  <rect x="38" y="26" width="644" height="336" rx="14" fill="#0b1a22" stroke="#1e3d48" stroke-width="1.5" />
+  <path d="M38 40a14 14 0 0 1 14-14h616a14 14 0 0 1 14 14v28H38Z" fill="#0f2630" />
+  <line x1="38" y1="68" x2="682" y2="68" stroke="#1e3d48" />
+  <circle cx="62" cy="48" r="10" fill="#0d9488" />
+  <text x="57" y="52" fill="#fff" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="900">CR</text>
+  <text x="82" y="52" fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13.5" font-weight="800">CiviReka · Resident &amp; Public Complaint Administration</text>
+  <rect x="536" y="36" width="128" height="22" rx="11" fill="#0d9488" fill-opacity="0.2" stroke="#2dd4bf" />
+  <text x="550" y="51" fill="#5eead4" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">DRF · OPENAPI 3</text>
+
+  <!-- Top KPI Cards -->
+  <rect x="58" y="84" width="188" height="74" rx="10" fill="#102530" stroke="#204350" />
+  <text x="76" y="108" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="10" font-weight="700">REGISTERED RESIDENTS</text>
+  <text x="76" y="142" fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28" font-weight="800">1,248</text>
+  <text x="166" y="140" fill="#5eead4" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">16-digit NIK</text>
+
+  <rect x="264" y="84" width="188" height="74" rx="10" fill="#102530" stroke="#204350" />
+  <text x="282" y="108" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="10" font-weight="700">PUBLIC COMPLAINTS</text>
+  <text x="282" y="142" fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28" font-weight="800">64</text>
+  <text x="332" y="140" fill="#fbbf24" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">12 In Progress</text>
+
+  <rect x="470" y="84" width="192" height="74" rx="10" fill="#102530" stroke="#204350" />
+  <text x="488" y="108" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="10" font-weight="700">API SCHEMA &amp; AUTH</text>
+  <text x="488" y="138" fill="#5eead4" font-family="ui-monospace, monospace" font-size="14" font-weight="800">/api/schema/</text>
+  <text x="488" y="152" fill="#94a3b8" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10.5">Session + DRF Token Auth</text>
+
+  <!-- Complaint Records & Status Table -->
+  <rect x="58" y="174" width="604" height="168" rx="10" fill="#102530" stroke="#204350" />
+  <text x="78" y="200" fill="#e2e8f0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="800">Recent Resident Complaints &amp; REST Endpoints</text>
+  <text x="518" y="200" fill="#5eead4" font-family="ui-monospace, monospace" font-size="11" font-weight="700">GET / POST /api/aduan/</text>
+
+  <!-- Row 1 -->
+  <rect x="76" y="214" width="568" height="34" rx="6" fill="#0b1a22" stroke="#1b3844" />
+  <text x="92" y="235" fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700">Perbaikan Drainase &amp; Saluran Air RW 04</text>
+  <text x="378" y="235" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="11">NIK 357301••••0003</text>
+  <rect x="556" y="221" width="74" height="20" rx="10" fill="#10b981" fill-opacity="0.2" stroke="#34d399" />
+  <text x="572" y="235" fill="#6ee7b7" font-family="ui-monospace, monospace" font-size="10" font-weight="800">SELESAI</text>
+
+  <!-- Row 2 -->
+  <rect x="76" y="256" width="568" height="34" rx="6" fill="#0b1a22" stroke="#1b3844" />
+  <text x="92" y="277" fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700">Penerangan Jalan Umum Padam RT 02</text>
+  <text x="378" y="277" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="11">NIK 357301••••0001</text>
+  <rect x="556" y="263" width="74" height="20" rx="10" fill="#f59e0b" fill-opacity="0.2" stroke="#fbbf24" />
+  <text x="568" y="277" fill="#fde047" font-family="ui-monospace, monospace" font-size="10" font-weight="800">DIPROSES</text>
+
+  <!-- Row 3 -->
+  <rect x="76" y="298" width="568" height="34" rx="6" fill="#0b1a22" stroke="#1b3844" />
+  <text x="92" y="319" fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700">Pengangkutan Sampah Terjadwal Kelurahan</text>
+  <text x="378" y="319" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="11">NIK 357301••••0004</text>
+  <rect x="556" y="305" width="74" height="20" rx="10" fill="#38bdf8" fill-opacity="0.2" stroke="#38bdf8" />
+  <text x="579" y="319" fill="#bae6fd" font-family="ui-monospace, monospace" font-size="10" font-weight="800">BARU</text>
+</svg>
