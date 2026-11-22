@@ -2,7 +2,7 @@
 
 [![Live Demo](https://img.shields.io/badge/▶%20LIVE%20DEMO-Cloudflare%20Pages-F38020?style=for-the-badge&logo=cloudflarepages&logoColor=white)](https://fredi-irawan-portfolio.pages.dev)
 
-A production-ready bilingual portfolio for Fredi Irawan, an Informatics student and software developer in Malang, East Java, Indonesia. The site presents verified education, training, internships, credentials, and selected projects across web, mobile, GIS, data analytics, computer vision, and augmented reality.
+A production-ready bilingual portfolio for Fredi Irawan, an Informatics student and software developer in Malang, East Java, Indonesia. The site presents verified education, training, internships, credentials, and selected projects across web, mobile, data analytics, computer vision, and augmented reality.
 
 ## ✨ Features
 

@@ -21,18 +21,18 @@ export const id: Translation = {
     eyebrow: 'Mahasiswa Teknik Informatika · Software Developer',
     title: 'Membangun aplikasi web, mobile, dan berbasis data untuk kebutuhan nyata.',
     description:
-      'Mahasiswa Teknik Informatika dan software developer yang mengembangkan solusi praktis di bidang web, mobile, GIS, analitik data, dan computer vision.',
+      'Mahasiswa Teknik Informatika dan software developer yang mengembangkan solusi praktis di bidang web, mobile, analitik data, dan computer vision.',
     projects: 'Jelajahi proyek',
     github: 'Profil GitHub',
     cv: 'Unduh CV',
     availability: 'Terbuka untuk peluang dan kolaborasi',
     workspace: 'Ruang kerja developer',
-    workspaceFocus: ['Web & Mobile', 'GIS & Data', 'Computer Vision'],
+    workspaceFocus: ['Web & Mobile', 'Data & Backend', 'Computer Vision'],
   },
   about: {
     eyebrow: 'Tentang',
     title: 'Perjalanan teknologi yang tumbuh lewat praktik.',
-    body: 'Perjalanan pengembangan saya dimulai dari jurusan Teknik Komputer dan Jaringan di SMK, dilanjutkan dengan praktik pemrograman awal melalui Rakryan Digital Academy dan magang pengembangan perangkat lunak. Saat ini saya masih menempuh pendidikan S1 Teknik Informatika sambil mendalami software engineering, pengembangan web dan mobile, GIS, analitik data, serta computer vision melalui berbagai proyek praktis.',
+    body: 'Perjalanan pengembangan saya dimulai dari jurusan Teknik Komputer dan Jaringan di SMK, dilanjutkan dengan praktik pemrograman awal melalui Rakryan Digital Academy dan magang pengembangan perangkat lunak. Saat ini saya masih menempuh pendidikan S1 Teknik Informatika sambil mendalami software engineering, pengembangan web dan mobile, analitik data, serta computer vision melalui berbagai proyek praktis.',
     location: 'Lokasi',
     focus: 'Fokus saat ini',
     focusValue: 'Software engineering & computer vision',
@@ -49,7 +49,7 @@ export const id: Translation = {
     eyebrow: 'Karya pilihan',
     title: 'Proyek yang berangkat dari kebutuhan nyata',
     description:
-      'Pilihan terarah dalam software engineering, data spasial, analitik, mobile, computer vision, dan teknologi interaktif.',
+      'Pilihan terarah dalam software engineering, aplikasi web interaktif, analitik, mobile, computer vision, dan AR.',
     all: 'Semua',
     details: 'Lihat detail',
     github: 'Kode sumber',
@@ -75,7 +75,6 @@ export const id: Translation = {
     filters: {
       Web: 'Web',
       Mobile: 'Mobile',
-      GIS: 'GIS',
       Data: 'Data',
       'Computer Vision': 'Computer Vision',
       AR: 'AR',
@@ -85,7 +84,7 @@ export const id: Translation = {
     eyebrow: 'Pengalaman',
     title: 'Belajar melalui pekerjaan praktis',
     description:
-      'Dua pengalaman magang yang mencakup pengembangan perangkat lunak, sistem web, analitik, persiapan data GIS, pengujian, dan dokumentasi.',
+      'Dua pengalaman magang yang mencakup pengembangan perangkat lunak, sistem web, analitik, persiapan data terstruktur, pengujian, dan dokumentasi.',
     highlights: 'Pekerjaan pilihan',
   },
   education: {

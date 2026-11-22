@@ -21,18 +21,18 @@ export const en: Translation = {
     eyebrow: 'Informatics Student · Software Developer',
     title: 'Building practical web, mobile, and data-driven software.',
     description:
-      'Informatics student and software developer creating reliable applications across web, mobile, GIS, data analytics, and computer vision.',
+      'Informatics student and software developer creating reliable applications across web, mobile, data analytics, and computer vision.',
     projects: 'Explore projects',
     github: 'GitHub profile',
     cv: 'Download CV',
     availability: 'Open to opportunities and collaboration',
     workspace: 'Developer workspace',
-    workspaceFocus: ['Web & Mobile', 'GIS & Data', 'Computer Vision'],
+    workspaceFocus: ['Web & Mobile', 'Data & Backend', 'Computer Vision'],
   },
   about: {
     eyebrow: 'About',
     title: 'A hands-on path through technology.',
-    body: 'My development journey began in Computer and Network Engineering at vocational school, with early programming practice through Rakryan Digital Academy and a software development internship. I am now pursuing an undergraduate degree in Informatics while exploring software engineering, web and mobile development, GIS, data analytics, and computer vision through practical projects.',
+    body: 'My development journey began in Computer and Network Engineering at vocational school, with early programming practice through Rakryan Digital Academy and a software development internship. I am now pursuing an undergraduate degree in Informatics while exploring software engineering, web and mobile development, data analytics, and computer vision through practical projects.',
     location: 'Location',
     focus: 'Current focus',
     focusValue: 'Software engineering & computer vision',
@@ -49,7 +49,7 @@ export const en: Translation = {
     eyebrow: 'Selected work',
     title: 'Projects grounded in real use cases',
     description:
-      'A focused selection across software engineering, spatial data, analytics, mobile, computer vision, and interactive technology.',
+      'A focused selection across software engineering, interactive web applications, analytics, mobile, computer vision, and AR.',
     all: 'All',
     details: 'View details',
     github: 'Source code',
@@ -75,7 +75,6 @@ export const en: Translation = {
     filters: {
       Web: 'Web',
       Mobile: 'Mobile',
-      GIS: 'GIS',
       Data: 'Data',
       'Computer Vision': 'Computer Vision',
       AR: 'AR',
@@ -85,7 +84,7 @@ export const en: Translation = {
     eyebrow: 'Experience',
     title: 'Learning through practical work',
     description:
-      'Two internships spanning software development, web systems, analytics, GIS data preparation, testing, and documentation.',
+      'Two internships spanning software development, web systems, analytics, structured data preparation, testing, and documentation.',
     highlights: 'Selected work',
   },
   education: {

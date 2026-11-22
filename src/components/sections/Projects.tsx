@@ -9,7 +9,7 @@ import { Reveal } from '../ui/Reveal';
 import { SectionHeading } from '../ui/SectionHeading';
 
 type Filter = 'All' | ProjectCategory;
-const filters: Filter[] = ['All', 'Web', 'Mobile', 'GIS', 'Data', 'Computer Vision', 'AR'];
+const filters: Filter[] = ['All', 'Web', 'Mobile', 'Data', 'Computer Vision', 'AR'];
 
 export function Projects() {
   const { locale, t } = useLanguage();

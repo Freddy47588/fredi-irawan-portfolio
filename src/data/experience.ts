@@ -8,8 +8,8 @@ export const experiences: Experience[] = [
     role: { en: 'IT / Web Development Intern', id: 'Magang IT / Web Development' },
     period: { en: 'February 2026 – July 2026', id: 'Februari 2026 – Juli 2026' },
     summary: {
-      en: 'Contributed to web, analytics, GIS, information-system, database, forecasting, testing, and documentation work across several internal and public-facing initiatives.',
-      id: 'Berkontribusi pada pekerjaan web, analitik, GIS, sistem informasi, basis data, forecasting, pengujian, dan dokumentasi dalam beberapa inisiatif internal maupun publik.',
+      en: 'Contributed to web, analytics, location data, information-system, database, forecasting, testing, and documentation work across several internal and public-facing initiatives.',
+      id: 'Berkontribusi pada pekerjaan web, analitik, pemetaan data, sistem informasi, basis data, forecasting, pengujian, dan dokumentasi dalam beberapa inisiatif internal maupun publik.',
     },
     highlights: [
       {
@@ -17,15 +17,15 @@ export const experiences: Experience[] = [
         id: 'Harmoni Sains / OJS: mendukung struktur jurnal, antarmuka responsif, konten dan metadata, navigasi, konfigurasi multi-jurnal, serta pengujian usability.',
       },
       {
-        en: 'UMKM GIS Directory: collected and validated records, handled duplicates, normalized categories, prepared locations, and produced GIS-ready CSV datasets.',
-        id: 'Direktori GIS UMKM: mengumpulkan dan memvalidasi data, menangani duplikasi, menormalisasi kategori, menyiapkan lokasi, dan menghasilkan dataset CSV siap GIS.',
+        en: 'UMKM Location Directory: collected and validated records, handled duplicates, normalized categories, prepared location coordinates, and produced structured CSV datasets.',
+        id: 'Direktori Lokasi UMKM: mengumpulkan dan memvalidasi data, menangani duplikasi, menormalisasi kategori, menyiapkan koordinat lokasi, dan menghasilkan dataset CSV terstruktur.',
       },
       {
         en: 'Wearemania Analytics: worked on CSV upload, validation, cleaning, URL normalization, category mapping, dashboards, visualization, and ARIMA time-series preparation.',
         id: 'Analitik Wearemania: mengerjakan unggah CSV, validasi, pembersihan, normalisasi URL, pemetaan kategori, dashboard, visualisasi, dan persiapan deret waktu ARIMA.',
       },
     ],
-    technologies: ['Django', 'Python', 'CSV', 'GIS', 'OJS', 'ARIMA', 'Testing'],
+    technologies: ['Django', 'Python', 'CSV', 'Data Cleaning', 'OJS', 'ARIMA', 'Testing'],
   },
   {
     id: 'berkah-2022',

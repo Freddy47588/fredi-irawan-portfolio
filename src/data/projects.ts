@@ -70,7 +70,7 @@ export const projects: Project[] = [
       },
     ],
     year: 2026,
-    categories: ['GIS', 'Web'],
+    categories: ['Web', 'Data'],
     technologies: ['JavaScript ES6+', 'HTML5 Canvas', 'Web Audio API', 'Cartography', 'Algorithms'],
     githubUrl: 'https://github.com/Freddy47588/terra-folio',
     liveUrl: 'https://terra-folio.pages.dev',
@@ -201,23 +201,23 @@ export const projects: Project[] = [
   },
   {
     id: 'bandulan-gis',
-    title: 'Bandulan Warung GIS',
+    title: 'Bandulan Warung Map',
     description: {
-      en: 'An interactive Web GIS for exploring local businesses and eleven spatial layers in Bandulan, Malang.',
-      id: 'Web GIS interaktif untuk menjelajahi usaha lokal dan sebelas lapisan spasial di Bandulan, Malang.',
+      en: 'An interactive web map for exploring local businesses and eleven neighborhood map layers in Bandulan, Malang.',
+      id: 'Peta web interaktif untuk menjelajahi usaha lokal dan sebelas lapisan peta wilayah di Bandulan, Malang.',
     },
     overview: {
-      en: 'A browser-based map combining QGIS spatial data preparation with a custom bilingual discovery interface and synchronized layer legend.',
-      id: 'Peta berbasis browser yang memadukan persiapan data spasial QGIS dengan antarmuka penelusuran dwibahasa dan legenda lapisan tersinkronisasi.',
+      en: 'A browser-based interactive map combining structured neighborhood location datasets with a custom bilingual discovery interface and synchronized layer legend.',
+      id: 'Peta interaktif berbasis browser yang memadukan dataset lokasi lingkungan dengan antarmuka penelusuran dwibahasa dan legenda lapisan tersinkronisasi.',
     },
     problem: {
-      en: 'Turns neighborhood spatial datasets into an accessible, searchable Web GIS for understanding local business distribution alongside roads, buildings, and facilities.',
-      id: 'Mengubah dataset spasial kelurahan menjadi Web GIS yang aksesibel dan dapat dicari untuk memahami persebaran warung beserta jaringan jalan, bangunan, dan fasilitas.',
+      en: 'Turns neighborhood location datasets into an accessible, searchable web map for understanding local business distribution alongside roads, buildings, and facilities.',
+      id: 'Mengubah dataset lokasi kelurahan menjadi peta web yang aksesibel dan dapat dicari untuk memahami persebaran warung beserta jaringan jalan, bangunan, dan fasilitas.',
     },
     features: [
       {
-        en: 'Searchable warung locations and eleven toggleable spatial data layers',
-        id: 'Pencarian lokasi warung serta kontrol sebelas lapisan data spasial',
+        en: 'Searchable warung locations and eleven toggleable map layers',
+        id: 'Pencarian lokasi warung serta kontrol sebelas lapisan peta',
       },
       {
         en: 'Metric distance/area measurement, geolocation, and shareable map-view URLs',
@@ -229,8 +229,8 @@ export const projects: Project[] = [
       },
     ],
     year: 2026,
-    categories: ['GIS', 'Web'],
-    technologies: ['QGIS', 'qgis2web', 'Leaflet', 'JavaScript', 'Web GIS'],
+    categories: ['Web', 'Data'],
+    technologies: ['Leaflet', 'JavaScript', 'GeoJSON', 'Interactive Map'],
     githubUrl: 'https://github.com/Freddy47588/bandulan-warung-gis',
     liveUrl: 'https://bandulan-warung-gis.pages.dev/',
     image: 'gis.svg',

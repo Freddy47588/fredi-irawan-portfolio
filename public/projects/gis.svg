@@ -12,7 +12,7 @@
   <rect x="34" y="26" width="652" height="336" rx="14" fill="#0b1926" stroke="#1f3a4d" stroke-width="1.5" />
   <path d="M34 40a14 14 0 0 1 14-14h624a14 14 0 0 1 14 14v28H34Z" fill="#0f2334" />
   <line x1="34" y1="68" x2="686" y2="68" stroke="#1f3a4d" />
-  <text x="56" y="52" fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13.5" font-weight="800">Bandulan Warung GIS · Interactive Spatial Discovery</text>
+  <text x="56" y="52" fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13.5" font-weight="800">Bandulan Warung Map · Interactive Local Discovery</text>
   <rect x="544" y="36" width="124" height="22" rx="11" fill="#0d9488" fill-opacity="0.2" stroke="#2dd4bf" />
   <text x="558" y="51" fill="#5eead4" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">11 LAYERS · ID/EN</text>
 

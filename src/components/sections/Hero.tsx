@@ -1,9 +1,9 @@
 import {
   ArrowDown,
   ArrowUpRight,
+  Database,
   FileText,
   GitBranch,
-  Map,
   MapPin,
   MonitorSmartphone,
   ScanSearch,
@@ -83,7 +83,7 @@ export function Hero() {
               <span>{t.hero.workspaceFocus[0]}</span>
             </li>
             <li>
-              <Map aria-hidden="true" />
+              <Database aria-hidden="true" />
               <span>{t.hero.workspaceFocus[1]}</span>
             </li>
             <li>

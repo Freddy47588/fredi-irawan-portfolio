@@ -17,7 +17,7 @@ export const education: Education[] = [
       { en: 'Software engineering', id: 'Rekayasa perangkat lunak' },
       { en: 'Computer vision', id: 'Computer vision' },
       { en: 'Web & mobile systems', id: 'Sistem web & mobile' },
-      { en: 'Data & spatial analysis', id: 'Analisis data & spasial' },
+      { en: 'Data analytics & modeling', id: 'Analitik & pemodelan data' },
     ],
     featured: true,
   },

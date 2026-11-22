@@ -2,7 +2,7 @@ export type Locale = 'en' | 'id';
 export type Theme = 'dark' | 'light';
 export type LocalizedText = Record<Locale, string>;
 
-export type ProjectCategory = 'Web' | 'Mobile' | 'GIS' | 'Data' | 'Computer Vision' | 'AR';
+export type ProjectCategory = 'Web' | 'Mobile' | 'Data' | 'Computer Vision' | 'AR';
 export type ProjectStatus = 'active' | 'completed' | 'experimental' | 'academic';
 
 export interface Project {
