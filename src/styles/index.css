@@ -532,8 +532,7 @@ a:focus-visible {
   width: 100%;
   aspect-ratio: 5 / 6;
   object-fit: cover;
-  object-position: center 25%;
-  filter: saturate(0.82);
+  object-position: center 22%;
 }
 .portrait-label {
   display: flex;
