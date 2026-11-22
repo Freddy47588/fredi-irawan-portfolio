@@ -40,11 +40,6 @@ export const skillGroups: SkillGroup[] = [
     skills: ['Data Analytics', 'Computer Vision', 'YOLO11s', 'D-FINE', 'ARIMA', 'CSV Processing'],
   },
   {
-    id: 'gis',
-    title: { en: 'GIS & Spatial', id: 'GIS & Spasial' },
-    skills: ['QGIS', 'Leaflet', 'qgis2web', 'Web GIS', 'Topographic Modeling'],
-  },
-  {
     id: 'database-cloud',
     title: { en: 'Database & Cloud', id: 'Database & Cloud' },
     skills: [

@@ -1,10 +1,10 @@
-import { BrainCircuit, Braces, Code2, Database, Map, Smartphone, Wrench } from 'lucide-react';
+import { BrainCircuit, Braces, Code2, Database, Smartphone, Wrench } from 'lucide-react';
 import { skillGroups } from '../../data/skills';
 import { useLanguage } from '../../hooks/useLanguage';
 import { Reveal } from '../ui/Reveal';
 import { SectionHeading } from '../ui/SectionHeading';
 
-const icons = [Code2, Smartphone, Braces, BrainCircuit, Map, Database, Wrench];
+const icons = [Code2, Smartphone, Braces, BrainCircuit, Database, Wrench];
 export function Skills() {
   const { locale, t } = useLanguage();
   return (
